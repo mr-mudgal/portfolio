@@ -1,0 +1,16 @@
+{
+  "name": "Rishabh Mudgal — Python × Applied AI",
+  "short_name": "Rishabh Mudgal",
+  "description": "Python backend engineer building practical AI, automation, and data systems.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#080810",
+  "theme_color": "#090914",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
