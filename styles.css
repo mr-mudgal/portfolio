@@ -2097,10 +2097,21 @@ html[data-theme="light"] .footer-status-pill {
   transform: translateX(4px);
 }
 
+/* Global SVG Resets & Sizing Safety */
+svg {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
 .footer-link-icon {
-  width: 1.05rem;
-  height: 1.05rem;
+  width: 1.1rem !important;
+  height: 1.1rem !important;
+  min-width: 1.1rem;
+  max-width: 1.1rem;
+  min-height: 1.1rem;
+  max-height: 1.1rem;
   flex-shrink: 0;
+  display: inline-block;
   opacity: 0.85;
 }
 
@@ -2242,6 +2253,7 @@ html[data-theme="light"] .footer-back-to-top:hover {
   .system-flow { min-height: 15rem; }
   .degree-card { grid-template-columns: 1fr; gap: 1.2rem; }
   .contact__channels { grid-template-columns: 1fr; }
+  .footer-main { grid-template-columns: 1.5fr 1fr; gap: 2.2rem; }
 }
 
 @media (max-width: 720px) {
@@ -2271,6 +2283,8 @@ html[data-theme="light"] .footer-back-to-top:hover {
   .resume-action-box { flex-direction: column; align-items: flex-start; }
   .contact__channels { grid-template-columns: 1fr; }
   .site-footer { margin-top: 2.5rem; margin-bottom: 5.5rem; padding-bottom: 0; }
+  .footer-main { grid-template-columns: 1fr; gap: 2rem; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; gap: 1rem; }
   .page-intro { min-height: 0; padding-top: 8.5rem; }
   .page-intro__grid { grid-template-columns: 1fr; gap: 1.3rem; }
   .theme-toggle-float { bottom: 1.25rem; left: 1.25rem; width: 2.6rem; height: 2.6rem; }

@@ -1225,11 +1225,11 @@
 
   // Dynamic Certificate Card Icons mapping
   var certIcons = {
-    techsaksham: '<svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="8" height="8" rx="1.5" fill="#00A4EF"/><rect x="13" y="3" width="8" height="8" rx="1.5" fill="#7FBA00"/><rect x="3" y="13" width="8" height="8" rx="1.5" fill="#F25022"/><rect x="13" y="13" width="8" height="8" rx="1.5" fill="#FFB900"/></svg>',
-    google: '<svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" fill="#8C91FF"/><path d="M12 2v4m0 12v4M2 12h4m12 0h4m-3.1-6.9-2.8 2.8m-8.2 8.2-2.8 2.8m0-13.8 2.8 2.8m8.2 8.2 2.8 2.8" stroke="#8C91FF" stroke-width="2" stroke-linecap="round"/></svg>',
-    greatlearning: '<svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="4" fill="#6BE7FF" fill-opacity="0.2" stroke="#6BE7FF" stroke-width="2"/><path d="M9 12h6M12 9v6" stroke="#6BE7FF" stroke-width="2" stroke-linecap="round"/></svg>',
-    hackerrank: '<svg viewBox="0 0 24 24" fill="none"><path d="M4 17.5V6.5L12 2l8 4.5v11L12 22l-8-4.5Z" fill="#C7FF7B" fill-opacity="0.15" stroke="#C7FF7B" stroke-width="2"/><path d="M10 8v8M14 8v8M10 12h4" stroke="#C7FF7B" stroke-width="2" stroke-linecap="round"/></svg>',
-    aws: '<svg viewBox="0 0 24 24" fill="none"><path d="M4 14a8 8 0 0 0 16 0" stroke="#FF86C8" stroke-width="2" stroke-linecap="round"/><path d="M17 11l3 3-3 3" stroke="#FF86C8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+    techsaksham: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="8" height="8" rx="1.5" fill="#00A4EF"/><rect x="13" y="3" width="8" height="8" rx="1.5" fill="#7FBA00"/><rect x="3" y="13" width="8" height="8" rx="1.5" fill="#F25022"/><rect x="13" y="13" width="8" height="8" rx="1.5" fill="#FFB900"/></svg>',
+    google: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" fill="#8C91FF"/><path d="M12 2v4m0 12v4M2 12h4m12 0h4m-3.1-6.9-2.8 2.8m-8.2 8.2-2.8 2.8m0-13.8 2.8 2.8m8.2 8.2 2.8 2.8" stroke="#8C91FF" stroke-width="2" stroke-linecap="round"/></svg>',
+    greatlearning: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="4" fill="#6BE7FF" fill-opacity="0.2" stroke="#6BE7FF" stroke-width="2"/><path d="M9 12h6M12 9v6" stroke="#6BE7FF" stroke-width="2" stroke-linecap="round"/></svg>',
+    hackerrank: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 17.5V6.5L12 2l8 4.5v11L12 22l-8-4.5Z" fill="#C7FF7B" fill-opacity="0.15" stroke="#C7FF7B" stroke-width="2"/><path d="M10 8v8M14 8v8M10 12h4" stroke="#C7FF7B" stroke-width="2" stroke-linecap="round"/></svg>',
+    aws: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 14a8 8 0 0 0 16 0" stroke="#FF86C8" stroke-width="2" stroke-linecap="round"/><path d="M17 11l3 3-3 3" stroke="#FF86C8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'
   };
 
   function getCertIcon(issuerClass) {
