@@ -1,0 +1,1 @@
+Comprehensive joint industry certification by Microsoft & SAP validating deep technical mastery of Large Language Model (LLM) architectures, multi-head attention mechanisms, parameter-efficient fine-tuning (PEFT/LoRA), multimodal diffusion pipelines, and production prompt orchestration.

@@ -1,0 +1,22 @@
+# Multi-City Real-Time Weather Intelligence Application
+
+A Node.js and Express.js web service utilizing Pug server-side templating and RapidAPI Weather APIs to perform concurrent, multi-city meteorological data queries with batch comma-separated parsing.
+
+## Core Features & Architecture
+- **Batch Multi-City Parsing**: Allows users to query single or comma-separated lists of global cities (e.g. `paris,new york,seoul`) in a single request.
+- **RapidAPI Weather Integration**: High-throughput REST API client retrieving real-time temperature, atmospheric conditions, wind speed, and humidity.
+- **Pug Server-Side Templating**: Lightweight, declarative HTML rendering dynamic weather cards with clean typographical layout.
+- **Defensive API Error Handling**: Fallback mechanisms catching invalid location names or network timeouts without crashing the Node.js event loop.
+
+## Technology Stack
+- **Runtime & Server**: Node.js, Express.js
+- **Template Engine**: Pug (Jade)
+- **External APIs**: RapidAPI Weather Data Services
+- **Dev Tooling**: Nodemon
+
+## Steps to Run Locally
+1. Clone the repository: `git clone https://github.com/mr-mudgal/Weather-Application.git`
+2. Enter project directory: `cd Weather-Application`
+3. Install dependencies: `npm install`
+4. Start local development server: `nodemon app.js` (or `node app.js`)
+5. Open browser at: `http://localhost:5566/`

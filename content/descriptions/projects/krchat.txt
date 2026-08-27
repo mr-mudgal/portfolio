@@ -1,0 +1,30 @@
+# The KR Chat — Real-Time WebSocket Messaging & Group Collaboration Platform
+
+A full-duplex real-time communication platform engineered with Node.js, Socket.IO, Express.js, and MongoDB, featuring instant direct messaging, group channels, dynamic online presence tracking, and containerized Docker distribution.
+
+## Core Features & System Architecture
+- **Full-Duplex Real-Time Messaging**: Powered by Socket.IO WebSockets for sub-millisecond bidirectional text dispatch and group broadcasts.
+- **Presence & Activity Tracking**: Real-time broadcast of user online/offline statuses and live typing indicators.
+- **Discovery & Channel Search**: Dynamic search interfaces allowing users to query, discover, and connect with new contacts or join group discussions.
+- **User Authentication & Profiles**: Secure sign-in, registration flow, session maintenance, and dedicated user profile inspection views.
+- **Containerized Docker Distribution**: Packaged as an isolated Docker image (`kr-chat:vanilla`) with unified container lifecycle management (`docker run -p 2422:2422`).
+
+## Technology Stack
+- **Real-Time Communication**: Socket.IO, WebSockets
+- **Backend Runtime**: Node.js, Express.js
+- **Database Engine**: MongoDB / Mongoose (NoSQL Schemas)
+- **Templating & UI**: Pug (Jade) Server-Side Views, CSS3
+- **Containerization**: Docker
+
+## Steps to Run Locally
+
+### Option 1: Running with Docker (Recommended)
+1. Load container archive: `docker load < kr-chat:vanilla.tar`
+2. Start container daemon: `docker run -d --name kr-chat -p 2422:2422 kr-chat:vanilla`
+3. Access in browser: `http://localhost:2422`
+4. Stop container: `docker stop kr-chat`
+
+### Option 2: Running via Node.js
+1. Clone repository: `git clone https://github.com/mr-mudgal/KR-chat.git`
+2. Install dependencies: `npm install`
+3. Start server: `node app.js` (or `npm start`)

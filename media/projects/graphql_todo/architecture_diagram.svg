@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 560" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGradGraphql" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1021" />
+      <stop offset="50%" stop-color="#060914" />
+      <stop offset="100%" stop-color="#02040a" />
+    </linearGradient>
+    <linearGradient id="cardGradGraphql" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141d38" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0b1122" stop-opacity="0.95" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Frame -->
+  <rect width="940" height="560" rx="16" fill="url(#bgGradGraphql)" stroke="#1d2d54" stroke-width="1.5" />
+
+  <!-- Window Header Bar -->
+  <rect width="940" height="46" rx="16" fill="#0e162c" />
+  <rect y="30" width="940" height="16" fill="#0e162c" />
+  <line x1="0" y1="46" x2="940" y2="46" stroke="#1d2d54" stroke-width="1" />
+
+  <circle cx="26" cy="23" r="6" fill="#ff5f56" />
+  <circle cx="46" cy="23" r="6" fill="#ffbd2e" />
+  <circle cx="66" cy="23" r="6" fill="#27c93f" />
+
+  <text x="470" y="28" fill="#8ea2cc" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="600" text-anchor="middle">
+    Flask + GraphQL (Graphene) + Keycloak OIDC &amp; Stripe SaaS Architecture
+  </text>
+
+  <!-- Top Banner: Full Stack Enterprise Stack -->
+  <g transform="translate(40, 68)">
+    <rect x="0" y="0" width="860" height="58" rx="12" fill="#101a35" stroke="#4fe0ff" stroke-width="1.5" stroke-dasharray="6,4" />
+    <text x="25" y="35" fill="#4fe0ff" font-family="'JetBrains Mono', monospace" font-size="15" font-weight="700">ENTERPRISE SAAS PIPELINE</text>
+    <text x="280" y="35" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="13">
+      — Keycloak OIDC IAM · Graphene GraphQL Resolvers · MySQL Persistence · Stripe Billing
+    </text>
+    <rect x="740" y="15" width="95" height="28" rx="6" fill="#0a2a3a" stroke="#4fe0ff" stroke-width="1" />
+    <text x="787" y="33" fill="#4fe0ff" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" text-anchor="middle">FULL STACK</text>
+  </g>
+
+  <!-- Step 1: Keycloak IAM & Auth Layer -->
+  <g transform="translate(40, 150)">
+    <rect width="195" height="245" rx="12" fill="url(#cardGradGraphql)" stroke="#273d6e" stroke-width="1.2" />
+    <rect x="14" y="14" width="34" height="34" rx="8" fill="#1b2a4e" />
+    <text x="31" y="36" fill="#ffbd2e" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle">🔒</text>
+    
+    <text x="56" y="28" fill="#7a92ac" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">LAYER 1</text>
+    <text x="56" y="44" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Keycloak OIDC</text>
+    
+    <line x1="14" y1="58" x2="181" y2="58" stroke="#1f325a" stroke-width="1" />
+    <text x="14" y="80" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="11">
+      <tspan x="14" dy="0">• OpenID Connect (OIDC)</tspan>
+      <tspan x="14" dy="18">• Realm: 'myorg'</tspan>
+      <tspan x="14" dy="18">• Client: test_api_client</tspan>
+      <tspan x="14" dy="18">• Token introspection &amp; SSO</tspan>
+      <tspan x="14" dy="18">• Userinfo JSON resolver</tspan>
+      <tspan x="14" dy="18">• Session token refresh</tspan>
+    </text>
+    
+    <rect x="14" y="200" width="167" height="30" rx="6" fill="#0d1b2a" />
+    <text x="97" y="219" fill="#ffbd2e" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" text-anchor="middle">IAM &amp; OAuth2 Security</text>
+  </g>
+
+  <!-- Step 2: Flask Application & Middleware -->
+  <g transform="translate(260, 150)">
+    <rect width="195" height="245" rx="12" fill="url(#cardGradGraphql)" stroke="#273d6e" stroke-width="1.2" />
+    <rect x="14" y="14" width="34" height="34" rx="8" fill="#1b2a4e" />
+    <text x="31" y="36" fill="#4fe0ff" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle">⚡</text>
+    
+    <text x="56" y="28" fill="#7a92ac" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">LAYER 2</text>
+    <text x="56" y="44" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Flask Server</text>
+    
+    <line x1="14" y1="58" x2="181" y2="58" stroke="#1f325a" stroke-width="1" />
+    <text x="14" y="80" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="11">
+      <tspan x="14" dy="0">• server.py core engine</tspan>
+      <tspan x="14" dy="18">• @oidc.require_login guard</tspan>
+      <tspan x="14" dy="18">• Jinja2 HTML5 templating</tspan>
+      <tspan x="14" dy="18">• Custom 404 error handler</tspan>
+      <tspan x="14" dy="18">• Dynamic Pro tier gating</tspan>
+      <tspan x="14" dy="18">• Styler.css design tokens</tspan>
+    </text>
+    
+    <rect x="14" y="200" width="167" height="30" rx="6" fill="#0d1b2a" />
+    <text x="97" y="219" fill="#4fe0ff" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" text-anchor="middle">Flask MVC + OIDC</text>
+  </g>
+
+  <!-- Step 3: Graphene GraphQL Schema -->
+  <g transform="translate(480, 150)">
+    <rect width="205" height="245" rx="12" fill="url(#cardGradGraphql)" stroke="#c7ff7b" stroke-width="1.5" />
+    <rect x="14" y="14" width="34" height="34" rx="8" fill="#1a3320" />
+    <text x="31" y="36" fill="#c7ff7b" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle">📊</text>
+    
+    <text x="56" y="28" fill="#c7ff7b" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">LAYER 3 · GRAPHQL</text>
+    <text x="56" y="44" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Graphene API</text>
+    
+    <line x1="14" y1="58" x2="191" y2="58" stroke="#23472d" stroke-width="1" />
+    <text x="14" y="80" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="11">
+      <tspan x="14" dy="0">• Query: resolve_todos()</tspan>
+      <tspan x="14" dy="18">• Query: resolve_todo(title)</tspan>
+      <tspan x="14" dy="18">• Mutation: CreateToDo</tspan>
+      <tspan x="14" dy="18">• Mutation: UpdateToDo</tspan>
+      <tspan x="14" dy="18">• Mutation: DeleteToDo</tspan>
+      <tspan x="14" dy="18">• ObjectType: ToDo Model</tspan>
+    </text>
+    
+    <rect x="14" y="200" width="177" height="30" rx="6" fill="#0b2414" stroke="#27c93f" stroke-width="1" />
+    <text x="102" y="219" fill="#c7ff7b" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" text-anchor="middle">Schema &amp; Mutations</text>
+  </g>
+
+  <!-- Step 4: MySQL & Stripe Billing -->
+  <g transform="translate(705, 150)">
+    <rect width="195" height="245" rx="12" fill="url(#cardGradGraphql)" stroke="#273d6e" stroke-width="1.2" />
+    <rect x="14" y="14" width="34" height="34" rx="8" fill="#1b2a4e" />
+    <text x="31" y="36" fill="#ff86c8" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle">💳</text>
+    
+    <text x="56" y="28" fill="#7a92ac" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">LAYER 4</text>
+    <text x="56" y="44" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="700">DB &amp; Stripe SaaS</text>
+    
+    <line x1="14" y1="58" x2="181" y2="58" stroke="#1f325a" stroke-width="1" />
+    <text x="14" y="80" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="11">
+      <tspan x="14" dy="0">• MySQL 'To_Do' table</tspan>
+      <tspan x="14" dy="18">• User isolation via 'userid'</tspan>
+      <tspan x="14" dy="18">• Stripe Checkout Session</tspan>
+      <tspan x="14" dy="18">• Recurring subscription mode</tspan>
+      <tspan x="14" dy="18">• Pro license unlocking</tspan>
+      <tspan x="14" dy="18">• Image URL attachment</tspan>
+    </text>
+    
+    <rect x="14" y="200" width="167" height="30" rx="6" fill="#0d1b2a" />
+    <text x="97" y="219" fill="#ff86c8" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" text-anchor="middle">MySQL + Stripe API</text>
+  </g>
+
+  <!-- Flow connecting arrows -->
+  <path d="M 237 270 L 257 270" stroke="#4fe0ff" stroke-width="2" />
+  <path d="M 457 270 L 477 270" stroke="#4fe0ff" stroke-width="2" />
+  <path d="M 687 270 L 703 270" stroke="#4fe0ff" stroke-width="2" />
+
+  <!-- Bottom Metric Badges -->
+  <g transform="translate(40, 415)">
+    <rect width="860" height="110" rx="12" fill="#0a1020" stroke="#1c2c4f" stroke-width="1" />
+
+    <g transform="translate(25, 20)">
+      <text x="0" y="20" fill="#7a92ac" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">AUTHENTICATION IAM</text>
+      <text x="0" y="52" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="20" font-weight="800">Keycloak OIDC</text>
+      <text x="0" y="72" fill="#4fe0ff" font-family="system-ui, sans-serif" font-size="11.5">OAuth2 / OpenID Connect SSO</text>
+    </g>
+
+    <g transform="translate(255, 20)">
+      <text x="0" y="20" fill="#7a92ac" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">DATA INTERFACE</text>
+      <text x="0" y="52" fill="#c7ff7b" font-family="'JetBrains Mono', monospace" font-size="20" font-weight="800">Graphene GraphQL</text>
+      <text x="0" y="72" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="11.5">Queries, Mutations &amp; Models</text>
+    </g>
+
+    <g transform="translate(500, 20)">
+      <text x="0" y="20" fill="#7a92ac" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">PERSISTENCE TIER</text>
+      <text x="0" y="52" fill="#ffd166" font-family="'JetBrains Mono', monospace" font-size="20" font-weight="800">MySQL Database</text>
+      <text x="0" y="72" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="11.5">User-isolated relational records</text>
+    </g>
+
+    <g transform="translate(710, 20)">
+      <text x="0" y="20" fill="#7a92ac" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">MONETIZATION</text>
+      <text x="0" y="52" fill="#ff86c8" font-family="'JetBrains Mono', monospace" font-size="20" font-weight="800">Stripe Billing</text>
+      <text x="0" y="72" fill="#ff86c8" font-family="system-ui, sans-serif" font-size="11.5">Subscription Pro licensing</text>
+    </g>
+  </g>
+</svg>

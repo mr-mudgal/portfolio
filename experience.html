@@ -3,91 +3,205 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Engineering track record of Rishabh Mudgal — building high-availability APIs, LLM-OCR pipelines, and automated ETL architectures.">
     <meta name="theme-color" content="#090914">
-    <title>Experience — Rishabh Mudgal</title>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <title>Experience — Rishabh Mudgal</title>
   </head>
   <body>
-    <div class="page-noise" aria-hidden="true"></div>
-    <div class="ambient ambient--one" aria-hidden="true"></div><div class="ambient ambient--two" aria-hidden="true"></div>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <!-- Interactive Generative Circuit & Wave Canvas -->
+    <canvas id="ambient-canvas" class="ambient-canvas" aria-hidden="true"></canvas>
+
+
+
+    <div class="ambient ambient--one" aria-hidden="true"></div>
+    <div class="ambient ambient--two" aria-hidden="true"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <!-- Minimalist Floating Controls -->
+    <button class="theme-toggle-float" type="button" aria-label="Switch theme" aria-pressed="false" data-theme-toggle>
+      <span class="theme-toggle-float__icon">
+        <span class="theme-toggle-float__sun" aria-hidden="true">☀</span>
+        <span class="theme-toggle-float__moon" aria-hidden="true">◐</span>
+      </span>
+    </button>
+
+    <button class="back-to-top" type="button" aria-label="Scroll back to top" data-back-to-top>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m18 15-6-6-6 6"/>
+      </svg>
+    </button>
+
+    <!-- Project & Resume Quick Preview Modal -->
+    <div class="project-modal" data-project-modal aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="project-modal__backdrop" data-modal-backdrop></div>
+      <div class="project-modal__dialog">
+        <button class="project-modal__close" type="button" aria-label="Close modal" data-modal-close>✕</button>
+        <div data-modal-body>
+          <!-- Dynamically populated via script.js -->
+        </div>
+      </div>
+    </div>
 
     <header class="site-header" data-header>
-      <a class="brand" href="index.html"><span class="brand__mark">RM<span>.</span></span><span class="brand__label">Rishabh Mudgal</span></a>
-      <nav class="site-nav" id="site-navigation" data-navigation>
-        <a href="index.html">Approach</a><a href="projects.html">Projects</a><a class="is-active" href="experience.html">Experience</a><a href="education.html">Education</a><a href="#contact" class="nav-contact">Let’s talk <span>↗</span></a>
+      <a class="brand" href="index.html" aria-label="Rishabh Mudgal — Approach">
+        <span class="brand__mark">RM<span>.</span></span>
+        <span class="brand__label">Rishabh Mudgal</span>
+      </a>
+      <nav class="site-nav" id="site-navigation" aria-label="Primary navigation" data-navigation>
+        <a href="index.html">Approach</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a class="is-active" href="experience.html">Experience</a>
+        <a href="education.html">Credentials</a>
+        <a href="#contact" class="nav-contact">Let’s talk <span aria-hidden="true">↗</span></a>
       </nav>
-      <button class="theme-toggle" type="button" data-theme-toggle><span class="theme-toggle__sun">☀</span><span class="theme-toggle__moon">◐</span></button>
-      <button class="menu-toggle" type="button" aria-controls="site-navigation" data-menu-toggle><span></span><span></span></button>
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="site-navigation" aria-expanded="false" data-menu-toggle>
+        <span></span><span></span>
+      </button>
     </header>
 
     <main id="main-content">
-      <section class="section-shell page-intro">
+      <section class="section-shell page-intro" id="top">
         <div class="page-intro__grid" data-reveal>
-          <div><p class="eyebrow">03 — Career Timeline</p><h1>Where I've <em>built.</em></h1></div>
-          <p>A history of engineering high-availability APIs, deploying ML models, and turning messy data into reliable workflows.</p>
+          <div>
+            <p class="eyebrow">Career Timeline</p>
+            <h1>Where I’ve <em>built.</em></h1>
+          </div>
+          <p>A history of engineering high-availability APIs, deploying LLM/OCR pipelines, and turning unstructured data into reliable production workflows.</p>
         </div>
       </section>
 
       <section class="section-shell" data-reveal>
         <div class="timeline">
+          <!-- Role 1: Pentation Analytics (Current) -->
           <article class="role role--featured">
-            <div class="role__time">Jun 2024 <span>— Present</span></div>
+            <div class="role__sidebar">
+              <div class="role__time">Jun 2024 <span>— Present</span></div>
+              <h4 class="role__company">Pentation<br>Analytics</h4>
+            </div>
             <div class="role__body">
               <div class="role__heading">
-                <div>
-                  <p class="role__company">Pentation Analytics</p>
-                  <h3>Backend Engineer / Python Developer</h3>
-                </div>
+                <h3>Backend Engineer / Python Developer</h3>
                 <span class="role__badge">Current</span>
               </div>
+              <p class="role__summary">Designing, developing, and optimizing Python REST APIs and hybrid LLM-driven data architectures under strict SLA timelines.</p>
+              <div class="role__highlights">
+                <span>FastAPI</span>
+                <span>Flask</span>
+                <span>SuryaOCR</span>
+                <span>RunPod GPU</span>
+                <span>Gemini / Groq APIs</span>
+                <span>ETL Pipelines</span>
+              </div>
               <ul class="role__details">
-                <li>Overhauled backend architecture with Python/FastAPI, reducing endpoint response times by 90%.</li>
-                <li>Engineered a hybrid LLM-driven OCR backend (SuryaOCR on RunPod GPUs) dynamically routing payloads via Gemini/Groq APIs.</li>
-                <li>Deployed enterprise-grade ETL pipelines to ingest and normalize large-scale unstructured legal datasets.</li>
-                <li>Automated end-to-end data workflows via CRON, ensuring near real-time processing under strict SLAs.</li>
+                <li>Designed, developed, and optimized robust Python REST APIs using Flask and FastAPI for automated data ingestion, overhauling backend architecture to reduce endpoint response and execution times by 90%.</li>
+                <li>Engineered a hybrid LLM-driven OCR backend architecture utilizing SuryaOCR on RunPod GPU instances; dynamically routed payloads via Gemini and Groq APIs for high-accuracy, low-latency multimodal data extraction.</li>
+                <li>Deployed enterprise-grade Python ETL pipelines (Selenium, BeautifulSoup, Pandas, SQL) to ingest, normalize, and process large-scale unstructured legal datasets for insurance fraud detection platforms.</li>
+                <li>Applied advanced prompt engineering and JSON-constrained formatting to maximize OCR-to-LLM extraction consistency across highly unstructured enterprise PDFs.</li>
+                <li>Automated end-to-end data workflows and backend processes via CRON scheduling, guaranteeing reliable, near real-time processing under strict SLA timelines.</li>
+                <li>Partnered with frontend engineers following Agile methodologies to integrate analytical backend APIs with enterprise dashboards, driving a 25% increase in operational decision-making efficiency.</li>
               </ul>
             </div>
           </article>
+
+          <!-- Role 2: Tutcart -->
           <article class="role">
-            <div class="role__time">Dec 2023 <span>— Apr 2024</span></div>
+            <div class="role__sidebar">
+              <div class="role__time">Dec 2023 <span>— Apr 2024</span></div>
+              <h4 class="role__company">Tutcart</h4>
+            </div>
             <div class="role__body">
-              <p class="role__company">Tutcart</p>
-              <h3>Full-Stack Developer</h3>
+              <div class="role__heading">
+                <h3>Full-Stack Developer</h3>
+              </div>
+              <p class="role__summary">Developed microservice architectures and interactive web frontends.</p>
+              <div class="role__highlights">
+                <span>Node.js</span>
+                <span>Next.js</span>
+                <span>REST APIs</span>
+                <span>Security Protocols</span>
+              </div>
               <ul class="role__details">
-                <li>Developed a scalable Node.js backend comprising 17+ microservice REST APIs.</li>
-                <li>Built a responsive Next.js application, boosting user engagement by 15%.</li>
+                <li>Developed a scalable Node.js backend comprising 17+ microservice REST APIs, implementing strict status codes, comprehensive error-handling middleware, and token-based security parameters.</li>
+                <li>Built a responsive Next.js web application with enhanced security protocols and optimized server-side rendering, driving a 15% boost in user engagement metrics.</li>
               </ul>
             </div>
           </article>
+
+          <!-- Role 3: MetroGhar Property Solutions -->
           <article class="role">
-            <div class="role__time">Oct 2023 <span>— Dec 2023</span></div>
+            <div class="role__sidebar">
+              <div class="role__time">Oct 2023 <span>— Dec 2023</span></div>
+              <h4 class="role__company">MetroGhar<br>Property Solutions</h4>
+            </div>
             <div class="role__body">
-              <p class="role__company">MetroGhar Property Solutions</p>
-              <h3>Python Developer</h3>
+              <div class="role__heading">
+                <h3>Python Developer</h3>
+              </div>
+              <p class="role__summary">Consolidated transactional datasets and normalized property schemas.</p>
+              <div class="role__highlights">
+                <span>Python</span>
+                <span>Pandas</span>
+                <span>NumPy</span>
+                <span>Data Cleaning</span>
+              </div>
               <ul class="role__details">
-                <li>Consolidated 4 highly unstructured transactional datasets using Pandas/NumPy, improving data integrity by 30%.</li>
+                <li>Consolidated 4 highly unstructured transactional datasets using Pandas and NumPy, executing data cleaning, transformation, and optimization scripts that improved data integrity by 30%.</li>
+                <li>Architected automated SQL normalization routines to streamline property record indexing and eliminate redundant database queries.</li>
               </ul>
             </div>
           </article>
+
+          <!-- Role 4: Conscript HR Advisors -->
           <article class="role">
-            <div class="role__time">Aug 2023 <span>— Oct 2023</span></div>
+            <div class="role__sidebar">
+              <div class="role__time">Aug 2023 <span>— Oct 2023</span></div>
+              <h4 class="role__company">Conscript<br>HR Advisors</h4>
+            </div>
             <div class="role__body">
-              <p class="role__company">Conscript HR Advisors</p>
-              <h3>Data Analyst Intern</h3>
+              <div class="role__heading">
+                <h3>Data Analyst Intern</h3>
+              </div>
+              <p class="role__summary">Built high-volume web scraping architectures for recruitment data.</p>
+              <div class="role__highlights">
+                <span>Selenium</span>
+                <span>Requests</span>
+                <span>ETL Scraping</span>
+                <span>Data Pipelines</span>
+              </div>
               <ul class="role__details">
-                <li>Built distributed web scraping scripts to ingest 75K+ rows of recruitment market data into internal databases.</li>
+                <li>Built distributed web scraping scripts using Selenium and Python requests to ingest 75K+ rows of recruitment market data into internal databases.</li>
+                <li>Engineered automated data validation and deduplication pipelines, accelerating downstream talent analytics workflows by 20%.</li>
               </ul>
             </div>
           </article>
+
+          <!-- Role 5: Samishti Infotech -->
           <article class="role">
-            <div class="role__time">Jul 2023 <span>— Aug 2023</span></div>
+            <div class="role__sidebar">
+              <div class="role__time">Jul 2023 <span>— Aug 2023</span></div>
+              <h4 class="role__company">Samishti<br>Infotech</h4>
+            </div>
             <div class="role__body">
-              <p class="role__company">Samishti Infotech</p>
-              <h3>Backend Developer</h3>
+              <div class="role__heading">
+                <h3>Backend Developer</h3>
+              </div>
+              <p class="role__summary">Engineered real-time socket communication and database indexing.</p>
+              <div class="role__highlights">
+                <span>Node.js</span>
+                <span>Socket.IO</span>
+                <span>MongoDB</span>
+                <span>AWS</span>
+              </div>
               <ul class="role__details">
-                <li>Built and deployed a real-time chat backend using Node.js, Socket.IO, and MongoDB on AWS/Heroku.</li>
-                <li>Optimized MongoDB aggregation pipelines, increasing query execution performance by 35%.</li>
+                <li>Built a real-time chat backend using Node.js, Socket.IO, and MongoDB, successfully deploying the cluster to AWS and Heroku environments.</li>
+                <li>Optimized MongoDB aggregation pipelines and indexing strategies, increasing query execution performance by 35%.</li>
               </ul>
             </div>
           </article>
@@ -95,17 +209,139 @@
       </section>
     </main>
 
-    <section class="skill-ticker" aria-label="Tools and technologies"><div class="skill-ticker__track"><span>Python</span><i>✦</i><span>FastAPI</span><i>✦</i><span>LLM Workflows</span><i>✦</i><span>PyTorch</span><i>✦</i><span>PostgreSQL</span><i>✦</i><span>Docker</span><i>✦</i><span>OCR Systems</span><i>✦</i><span>Automation</span><i>✦</i><span>Python</span><i>✦</i><span>FastAPI</span><i>✦</i><span>LLM Workflows</span><i>✦</i><span>PyTorch</span><i>✦</i><span>PostgreSQL</span><i>✦</i><span>Docker</span><i>✦</i><span>OCR Systems</span><i>✦</i><span>Automation</span><i>✦</i></div></section>
-    <section class="section-shell contact contact--expanded" id="contact">
-      <div class="contact__glow" aria-hidden="true"></div>
-      <div class="contact__content" data-reveal><p class="eyebrow">Let’s make contact</p><h2>Have an idea worth<br><em>making useful?</em></h2><p>I’m interested in backend and applied-AI opportunities where careful engineering can turn a promising idea into a dependable product.</p></div>
-      <div class="contact__channels" data-reveal data-reveal-delay="100">
-        <a class="contact-channel" href="mailto:work.mudgal@proton.me"><span class="contact-channel__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="contact-channel__copy"><small>Email</small><strong>work.mudgal@proton.me</strong></span><span class="contact-channel__arrow" aria-hidden="true">↗</span></a>
-        <a class="contact-channel" href="https://linkedin.com/in/mr-mudgal" target="_blank" rel="noreferrer"><span class="contact-channel__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 8.3A1.9 1.9 0 1 0 6.5 4.5a1.9 1.9 0 0 0 0 3.8ZM4.8 9.8h3.4V20H4.8V9.8Zm5.5 0h3.2v1.4h.1c.5-.9 1.7-1.8 3.6-1.8 3.8 0 4.5 2.4 4.5 5.6v5h-3.4v-4.4c0-1.1 0-2.5-1.6-2.5s-1.9 1.2-1.9 2.4V20h-3.4V9.8Z"/></svg></span><span class="contact-channel__copy"><small>Connect</small><strong>LinkedIn</strong></span><span class="contact-channel__arrow" aria-hidden="true">↗</span></a>
-        <a class="contact-channel" href="https://github.com/mr-mudgal" target="_blank" rel="noreferrer"><span class="contact-channel__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6a9.5 9.5 0 0 0-3 18.5c.5.1.6-.2.6-.5v-1.9c-2.5.5-3-1.1-3-1.1-.4-1-.9-1.3-.9-1.3-.8-.5.1-.5.1-.5.9.1 1.4 1 1.4 1 .8 1.4 2 1 2.5.8.1-.6.3-1 .6-1.2-2-.2-4.1-1-4.1-4.4 0-1 .4-1.8 1-2.4-.1-.2-.4-1.1.1-2.4 0 0 .8-.3 2.5.9A8.6 8.6 0 0 1 12 8c.8 0 1.5.1 2.2.3 1.7-1.2 2.5-.9 2.5-.9.5 1.3.2 2.2.1 2.4.6.7 1 1.5 1 2.4 0 3.4-2.1 4.2-4.1 4.4.3.3.6.8.6 1.6v2.4c0 .2.2.6.6.5A9.5 9.5 0 0 0 12 2.6Z"/></svg></span><span class="contact-channel__copy"><small>Explore</small><strong>GitHub</strong></span><span class="contact-channel__arrow" aria-hidden="true">↗</span></a>
+    <section class="skill-ticker" aria-label="Tools and technologies">
+      <div class="skill-ticker__track">
+        <span>Python</span><i>✦</i><span>FastAPI</span><i>✦</i><span>LLM Workflows</span><i>✦</i><span>PyTorch</span><i>✦</i><span>PostgreSQL</span><i>✦</i><span>Docker</span><i>✦</i><span>SuryaOCR</span><i>✦</i><span>RunPod GPUs</span><i>✦</i><span>Automation</span><i>✦</i><span>Python</span><i>✦</i><span>FastAPI</span><i>✦</i><span>LLM Workflows</span><i>✦</i><span>PyTorch</span><i>✦</i><span>PostgreSQL</span><i>✦</i><span>Docker</span><i>✦</i><span>SuryaOCR</span><i>✦</i><span>RunPod GPUs</span><i>✦</i><span>Automation</span><i>✦</i>
       </div>
     </section>
-    <footer class="site-footer section-shell"><a class="brand" href="#top" aria-label="Back to the top"><span class="brand__mark">RM<span>.</span></span></a><p>Crafted with curiosity, code, and a practical point of view.</p><p>© <span data-year></span> Rishabh Mudgal</p></footer>
+
+    <!-- Contact Section with Resume Action Box -->
+    <section class="section-shell contact contact--expanded" id="contact">
+      <div class="contact__glow" aria-hidden="true"></div>
+      <div class="contact__content" data-reveal>
+        <p class="eyebrow">Let’s Connect</p>
+        <h2>Have an idea worth<br><em>making useful?</em></h2>
+        <p>I’m interested in backend and applied-AI opportunities where careful engineering can turn a promising idea into a dependable product.</p>
+      </div>
+
+      <!-- Resume Action Box -->
+      <div class="resume-action-box" data-reveal>
+        <div class="resume-action-box__info">
+          <div class="resume-action-box__icon" aria-hidden="true">📄</div>
+          <div class="resume-action-box__text">
+            <strong>Rishabh Mudgal — Resume</strong>
+            <span>Curriculum Vitae · Backend &amp; Applied AI Engineer</span>
+          </div>
+        </div>
+        <div class="resume-action-box__btns">
+          <a class="button button--primary" href="media/resume.pdf" download>Download Resume <span>↓</span></a>
+          <a class="button button--secondary" href="media/resume.pdf" target="_blank">Open in New Tab <span>↗</span></a>
+          <button class="button button--secondary" type="button" data-resume-preview>Quick Preview <span>✦</span></button>
+        </div>
+      </div>
+
+      <div class="contact__channels" data-reveal data-reveal-delay="100">
+        <a class="contact-channel" href="mailto:work.mudgal@proton.me">
+          <span class="contact-channel__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="contact-channel__copy"><small>Email</small><strong>work.mudgal@proton.me</strong></span><span class="contact-channel__arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="contact-channel" href="https://linkedin.com/in/mr-mudgal" target="_blank" rel="noreferrer">
+          <span class="contact-channel__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 8.3A1.9 1.9 0 1 0 6.5 4.5a1.9 1.9 0 0 0 0 3.8ZM4.8 9.8h3.4V20H4.8V9.8Zm5.5 0h3.2v1.4h.1c.5-.9 1.7-1.8 3.6-1.8 3.8 0 4.5 2.4 4.5 5.6v5h-3.4v-4.4c0-1.1 0-2.5-1.6-2.5s-1.9 1.2-1.9 2.4V20h-3.4V9.8Z"/></svg></span>
+          <span class="contact-channel__copy"><small>Connect</small><strong>LinkedIn</strong></span><span class="contact-channel__arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="contact-channel" href="https://github.com/mr-mudgal" target="_blank" rel="noreferrer">
+          <span class="contact-channel__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6a9.5 9.5 0 0 0-3 18.5c.5.1.6-.2.6-.5v-1.9c-2.5.5-3-1.1-3-1.1-.4-1-.9-1.3-.9-1.3-.8-.5.1-.5.1-.5.9.1 1.4 1 1.4 1 .8 1.4 2 1 2.5.8.1-.6.3-1 .6-1.2-2-.2-4.1-1-4.1-4.4 0-1 .4-1.8 1-2.4-.1-.2-.4-1.1.1-2.4 0 0 .8-.3 2.5.9A8.6 8.6 0 0 1 12 8c.8 0 1.5.1 2.2.3 1.7-1.2 2.5-.9 2.5-.9.5 1.3.2 2.2.1 2.4.6.7 1 1.5 1 2.4 0 3.4-2.1 4.2-4.1 4.4.3.3.6.8.6 1.6v2.4c0 .2.2.6.6.5A9.5 9.5 0 0 0 12 2.6Z"/></svg></span>
+          <span class="contact-channel__copy"><small>Explore</small><strong>GitHub</strong></span><span class="contact-channel__arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <footer class="site-footer section-shell" role="contentinfo">
+      <div class="footer-card" data-reveal>
+        <div class="footer-main">
+          <!-- Brand & Role Summary -->
+          <div class="footer-brand-col">
+            <a class="brand brand--footer" href="#top" aria-label="Rishabh Mudgal — Back to Top">
+              <span class="brand__mark">RM<span>.</span></span>
+              <span class="brand__label">Rishabh Mudgal</span>
+            </a>
+            <p class="footer-bio">
+              AI Engineer &amp; Systems Architect specializing in autonomous agentic workflows, multimodal vision-language intelligence, and production-grade LLM orchestration.
+            </p>
+            <div class="footer-status-pill">
+              <span class="status-pulse-dot" aria-hidden="true"></span>
+              <span>Available for Applied AI &amp; Architecture Roles</span>
+            </div>
+          </div>
+
+          <!-- Navigation / Systems -->
+          <div class="footer-nav-col">
+            <h4 class="footer-heading">Architecture</h4>
+            <nav class="footer-links" aria-label="Site Navigation">
+              <a href="index.html">Approach &amp; Philosophy</a>
+              <a href="services.html">Services &amp; Capabilities</a>
+              <a href="projects.html">Featured Systems</a>
+              <a href="experience.html">Engineering Experience</a>
+              <a href="education.html">Credentials &amp; Certifications</a>
+            </nav>
+          </div>
+
+          <!-- Core Domains -->
+          <div class="footer-nav-col">
+            <h4 class="footer-heading">Core Domains</h4>
+            <ul class="footer-stack-list">
+              <li><span>Agentic Orchestration &amp; LangGraph</span></li>
+              <li><span>Multimodal Vision-Language Models</span></li>
+              <li><span>High-Throughput vLLM &amp; CUDA</span></li>
+              <li><span>Full-Stack AI Interfaces</span></li>
+            </ul>
+          </div>
+
+          <!-- Direct Channels -->
+          <div class="footer-nav-col">
+            <h4 class="footer-heading">Direct Channels</h4>
+            <nav class="footer-links" aria-label="Direct Contact Links">
+              <a href="mailto:work.mudgal@proton.me" class="footer-link-highlight">
+                <svg class="footer-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+                <span>work.mudgal@proton.me</span>
+                <span class="footer-arrow" aria-hidden="true">↗</span>
+              </a>
+              <a href="https://linkedin.com/in/mr-mudgal" target="_blank" rel="noreferrer">
+                <svg class="footer-link-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.5 8.3A1.9 1.9 0 1 0 6.5 4.5a1.9 1.9 0 0 0 0 3.8ZM4.8 9.8h3.4V20H4.8V9.8Zm5.5 0h3.2v1.4h.1c.5-.9 1.7-1.8 3.6-1.8 3.8 0 4.5 2.4 4.5 5.6v5h-3.4v-4.4c0-1.1 0-2.5-1.6-2.5s-1.9 1.2-1.9 2.4V20h-3.4V9.8Z"/></svg>
+                <span>LinkedIn Profile</span>
+                <span class="footer-arrow" aria-hidden="true">↗</span>
+              </a>
+              <a href="https://github.com/mr-mudgal" target="_blank" rel="noreferrer">
+                <svg class="footer-link-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6a9.5 9.5 0 0 0-3 18.5c.5.1.6-.2.6-.5v-1.9c-2.5.5-3-1.1-3-1.1-.4-1-.9-1.3-.9-1.3-.8-.5.1-.5.1-.5.9.1 1.4 1 1.4 1 .8 1.4 2 1 2.5.8.1-.6.3-1 .6-1.2-2-.2-4.1-1-4.1-4.4 0-1 .4-1.8 1-2.4-.1-.2-.4-1.1.1-2.4 0 0 .8-.3 2.5.9A8.6 8.6 0 0 1 12 8c.8 0 1.5.1 2.2.3 1.7-1.2 2.5-.9 2.5-.9.5 1.3.2 2.2.1 2.4.6.7 1 1.5 1 2.4 0 3.4-2.1 4.2-4.1 4.4.3.3.6.8.6 1.6v2.4c0 .2.2.6.6.5A9.5 9.5 0 0 0 12 2.6Z"/></svg>
+                <span>GitHub Repositories</span>
+                <span class="footer-arrow" aria-hidden="true">↗</span>
+              </a>
+              <a href="media/resume.pdf" target="_blank" rel="noreferrer">
+                <svg class="footer-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                <span>Curriculum Vitae</span>
+                <span class="footer-arrow" aria-hidden="true">↗</span>
+              </a>
+            </nav>
+          </div>
+        </div>
+
+        <!-- Sub-Footer / Meta -->
+        <div class="footer-bottom">
+          <div class="footer-bottom__copy">
+            <p>© <span data-year></span> Rishabh Mudgal. Built with intent, rigorous engineering &amp; precision.</p>
+          </div>
+          <div class="footer-bottom__meta">
+            <span class="footer-badge"><span class="badge-dot" aria-hidden="true"></span> Production Systems</span>
+            <a href="#top" class="footer-back-to-top" aria-label="Back to top">
+              <span>Back to Top</span>
+              <span class="footer-back-arrow" aria-hidden="true">↑</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="data/projects-data.js"></script>
+    <script src="data/certificates-data.js"></script>
     <script src="script.js" defer></script>
   </body>
 </html>

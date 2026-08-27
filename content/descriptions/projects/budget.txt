@@ -1,0 +1,22 @@
+# Python Django Dynamic Budget Allocation App
+
+A full-featured Python Django web application for category-based budget allocation, fund management, and cross-category rebalancing with defensive validation checks and session-authenticated user workspaces.
+
+## Core Features & Architecture
+- **Dynamic Category Allocation**: Create customized spending categories and allocate financial quotas with instant balance updates.
+- **In-Place Budget Management**: Direct inline controls to edit allocations, delete obsolete categories, or transfer amounts between categories.
+- **Defensive Transaction Validation**: Enforces strict financial integrity checks preventing overdrafts (transfers exceeding current source balances) and catching invalid target destinations.
+- **Session Authentication & Persistence**: Browser-persisted user session management with automatic account provisioning and SQLite/PostgreSQL relational storage.
+- **Responsive Mobile & Desktop Layout**: Clean, high-contrast user interface adapted for desktop monitors and mobile devices.
+
+## Technology Stack
+- **Backend Framework**: Python 3.x, Django (MTV Architecture, ORM, Forms, Session Management)
+- **Database**: SQLite (Development) / Relational Schema
+- **Frontend**: Responsive HTML5, CSS3, Vanilla JS
+
+## Steps to Run Locally
+1. Clone the repository: `git clone https://github.com/mr-mudgal/Simple-Budget-App.git`
+2. Navigate to project root: `cd Simple-Budget-App`
+3. Install dependencies: `pip install -r requirements.txt`
+4. Run database migrations: `python manage.py migrate`
+5. Start local server: `python manage.py runserver` (Access via `http://127.0.0.1:8000`)

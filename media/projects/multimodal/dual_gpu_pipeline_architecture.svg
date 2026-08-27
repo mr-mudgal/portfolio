@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 560" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGradMulti" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#120c24" />
+      <stop offset="50%" stop-color="#090614" />
+      <stop offset="100%" stop-color="#04020a" />
+    </linearGradient>
+    <linearGradient id="cardGradMulti" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#241444" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#120924" stop-opacity="0.95" />
+    </linearGradient>
+  </defs>
+
+  <!-- Frame Background -->
+  <rect width="940" height="560" rx="16" fill="url(#bgGradMulti)" stroke="#3a1e68" stroke-width="1.5" />
+
+  <!-- Top Title Bar -->
+  <rect width="940" height="46" rx="16" fill="#180e2f" />
+  <rect y="30" width="940" height="16" fill="#180e2f" />
+  <line x1="0" y1="46" x2="940" y2="46" stroke="#2d1754" stroke-width="1" />
+
+  <circle cx="26" cy="23" r="6" fill="#ff5f56" />
+  <circle cx="46" cy="23" r="6" fill="#ffbd2e" />
+  <circle cx="66" cy="23" r="6" fill="#27c93f" />
+
+  <text x="470" y="28" fill="#d2b8ff" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="600" text-anchor="middle">
+    Dual-GPU Multimodal Generative AI Publishing Pipeline Architecture
+  </text>
+
+  <!-- Master Orchestrator Banner -->
+  <g transform="translate(40, 68)">
+    <rect x="0" y="0" width="860" height="58" rx="12" fill="#1d1038" stroke="#b477ff" stroke-width="1.5" stroke-dasharray="6,4" />
+    <text x="25" y="35" fill="#ff86c8" font-family="'JetBrains Mono', monospace" font-size="15" font-weight="700">DUAL-GPU PARALLEL PIPELINE</text>
+    <text x="290" y="35" fill="#e2d6ed" font-family="system-ui, sans-serif" font-size="13">
+      — Qwen-2.5 LLM · Dual SDXL (cuda:0/1) · Potrace Vectorizer · ReportLab A4 Print PDF
+    </text>
+    <rect x="740" y="15" width="95" height="28" rx="6" fill="#38185c" stroke="#b477ff" stroke-width="1" />
+    <text x="787" y="33" fill="#ff86c8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" text-anchor="middle">2X SPEEDUP</text>
+  </g>
+
+  <!-- Step 1: Local LLM Brainstorming -->
+  <g transform="translate(40, 150)">
+    <rect width="195" height="245" rx="12" fill="url(#cardGradMulti)" stroke="#4a267a" stroke-width="1.2" />
+    <rect x="14" y="14" width="34" height="34" rx="8" fill="#301552" />
+    <text x="31" y="36" fill="#4fe0ff" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle">🧠</text>
+    
+    <text x="56" y="28" fill="#c097d8" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">PHASE 1</text>
+    <text x="56" y="44" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="700">LLM Art Director</text>
+    
+    <line x1="14" y1="58" x2="181" y2="58" stroke="#3b1b66" stroke-width="1" />
+    <text x="14" y="80" fill="#d2c4e3" font-family="system-ui, sans-serif" font-size="11">
+      <tspan x="14" dy="0">• Qwen2.5-1.5B-Instruct</tspan>
+      <tspan x="14" dy="18">• Strict JSON Schema</tspan>
+      <tspan x="14" dy="18">• 30 corporate humor prompts</tspan>
+      <tspan x="14" dy="18">• Dual palette generation</tspan>
+      <tspan x="14" dy="18">• Flat cel-shaded anime rules</tspan>
+      <tspan x="14" dy="18">• Zero gradient enforcement</tspan>
+    </text>
+    
+    <rect x="14" y="200" width="167" height="30" rx="6" fill="#1b0c2e" />
+    <text x="97" y="219" fill="#4fe0ff" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" text-anchor="middle">Prompt Engineering</text>
+  </g>
+
+  <!-- Step 2: VRAM Memory Flush -->
+  <g transform="translate(260, 150)">
+    <rect width="195" height="245" rx="12" fill="url(#cardGradMulti)" stroke="#ffd166" stroke-width="1.2" />
+    <rect x="14" y="14" width="34" height="34" rx="8" fill="#3a2e12" />
+    <text x="31" y="36" fill="#ffd166" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle">🧹</text>
+    
+    <text x="56" y="28" fill="#ffd166" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">PHASE 2 · MEMORY</text>
+    <text x="56" y="44" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="700">VRAM Purge</text>
+    
+    <line x1="14" y1="58" x2="181" y2="58" stroke="#4a3b18" stroke-width="1" />
+    <text x="14" y="80" fill="#d2c4e3" font-family="system-ui, sans-serif" font-size="11">
+      <tspan x="14" dy="0">• del text_pipe</tspan>
+      <tspan x="14" dy="18">• gc.collect()</tspan>
+      <tspan x="14" dy="18">• torch.cuda.empty_cache()</tspan>
+      <tspan x="14" dy="18">• Frees 100% LLM VRAM</tspan>
+      <tspan x="14" dy="18">• Prevents CUDA OOM</tspan>
+      <tspan x="14" dy="18">• Prepares Dual-GPU space</tspan>
+    </text>
+    
+    <rect x="14" y="200" width="167" height="30" rx="6" fill="#241a06" stroke="#ffd166" stroke-width="1" />
+    <text x="97" y="219" fill="#ffd166" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" text-anchor="middle">Zero CUDA OOM</text>
+  </g>
+
+  <!-- Step 3: Dual-GPU SDXL + ControlNet + Potrace -->
+  <g transform="translate(480, 150)">
+    <rect width="205" height="245" rx="12" fill="url(#cardGradMulti)" stroke="#ff86c8" stroke-width="1.5" />
+    <rect x="14" y="14" width="34" height="34" rx="8" fill="#3e1634" />
+    <text x="31" y="36" fill="#ff86c8" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle">⚡</text>
+    
+    <text x="56" y="28" fill="#ff86c8" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">PHASE 3 · DUAL GPU</text>
+    <text x="56" y="44" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="700">SDXL + ControlNet</text>
+    
+    <line x1="14" y1="58" x2="191" y2="58" stroke="#4d1f43" stroke-width="1" />
+    <text x="14" y="80" fill="#d2c4e3" font-family="system-ui, sans-serif" font-size="11">
+      <tspan x="14" dy="0">• cuda:0 (Even) | cuda:1 (Odd)</tspan>
+      <tspan x="14" dy="18">• ThreadPoolExecutor(2 workers)</tspan>
+      <tspan x="14" dy="18">• SDXL Base 1.0 (1024x1024)</tspan>
+      <tspan x="14" dy="18">• Potrace vectorizer (.svg)</tspan>
+      <tspan x="14" dy="18">• OpenCV Canny edge detector</tspan>
+      <tspan x="14" dy="18">• ControlNet conditioning 0.7</tspan>
+    </text>
+    
+    <rect x="14" y="200" width="177" height="30" rx="6" fill="#240c1e" stroke="#ff86c8" stroke-width="1" />
+    <text x="102" y="219" fill="#ff86c8" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" text-anchor="middle">2 Pages Simultaneous</text>
+  </g>
+
+  <!-- Step 4: ReportLab Print PDF Compilation -->
+  <g transform="translate(705, 150)">
+    <rect width="195" height="245" rx="12" fill="url(#cardGradMulti)" stroke="#c7ff7b" stroke-width="1.2" />
+    <rect x="14" y="14" width="34" height="34" rx="8" fill="#1b3318" />
+    <text x="31" y="36" fill="#c7ff7b" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle">📚</text>
+    
+    <text x="56" y="28" fill="#c097d8" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">PHASE 4</text>
+    <text x="56" y="44" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="700">A4 PDF Binder</text>
+    
+    <line x1="14" y1="58" x2="181" y2="58" stroke="#254722" stroke-width="1" />
+    <text x="14" y="80" fill="#d2c4e3" font-family="system-ui, sans-serif" font-size="11">
+      <tspan x="14" dy="0">• ReportLab canvas layout</tspan>
+      <tspan x="14" dy="18">• svglib vector rendering</tspan>
+      <tspan x="14" dy="18">• 5px page margin borders</tspan>
+      <tspan x="14" dy="18">• Top title &amp; central vector art</tspan>
+      <tspan x="14" dy="18">• Two color palette thumbnails</tspan>
+      <tspan x="14" dy="18">• Corporate_Survival.pdf</tspan>
+    </text>
+    
+    <rect x="14" y="200" width="167" height="30" rx="6" fill="#0d1b2a" />
+    <text x="97" y="219" fill="#c7ff7b" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" text-anchor="middle">Print-Ready Book</text>
+  </g>
+
+  <!-- Flow connecting arrows -->
+  <path d="M 237 270 L 257 270" stroke="#b477ff" stroke-width="2" />
+  <path d="M 457 270 L 477 270" stroke="#b477ff" stroke-width="2" />
+  <path d="M 687 270 L 703 270" stroke="#b477ff" stroke-width="2" />
+
+  <!-- Bottom Metric Badges -->
+  <g transform="translate(40, 415)">
+    <rect width="860" height="110" rx="12" fill="#140b24" stroke="#2f1854" stroke-width="1" />
+
+    <g transform="translate(25, 20)">
+      <text x="0" y="20" fill="#c097d8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">PROMPT INTELLIGENCE</text>
+      <text x="0" y="52" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="20" font-weight="800">Qwen-2.5 (1.5B)</text>
+      <text x="0" y="72" fill="#4fe0ff" font-family="system-ui, sans-serif" font-size="11.5">JSON dynamic theme director</text>
+    </g>
+
+    <g transform="translate(255, 20)">
+      <text x="0" y="20" fill="#c097d8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">VISION PARALLELISM</text>
+      <text x="0" y="52" fill="#ff86c8" font-family="'JetBrains Mono', monospace" font-size="20" font-weight="800">Dual SDXL (2x)</text>
+      <text x="0" y="72" fill="#ff86c8" font-family="system-ui, sans-serif" font-size="11.5">cuda:0 + cuda:1 parallel tasks</text>
+    </g>
+
+    <g transform="translate(500, 20)">
+      <text x="0" y="20" fill="#c097d8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">LINE ART CONVERSION</text>
+      <text x="0" y="52" fill="#ffd166" font-family="'JetBrains Mono', monospace" font-size="20" font-weight="800">Potrace Vectorizer</text>
+      <text x="0" y="72" fill="#ffd166" font-family="system-ui, sans-serif" font-size="11.5">100% scalable SVG paths</text>
+    </g>
+
+    <g transform="translate(710, 20)">
+      <text x="0" y="20" fill="#c097d8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">PUBLISHING TARGET</text>
+      <text x="0" y="52" fill="#c7ff7b" font-family="'JetBrains Mono', monospace" font-size="20" font-weight="800">A4 PDF Book</text>
+      <text x="0" y="72" fill="#c7ff7b" font-family="system-ui, sans-serif" font-size="11.5">Commercial print layout</text>
+    </g>
+  </g>
+</svg>

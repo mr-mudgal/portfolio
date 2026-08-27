@@ -1,0 +1,25 @@
+# Interactive Product Listing React Application
+
+A responsive React.js e-commerce catalog application featuring dynamic multi-criteria price sorting (low-to-high / high-to-low), category filtering, client-side pagination over 100+ product schemas via react-paginate, and frosted glassmorphism navigation.
+
+## Live Application
+- **Live Hosted URL**: [https://mr-mudgal.github.io/Product-List-React-App/](https://mr-mudgal.github.io/Product-List-React-App/)
+
+## Core Features & Architecture
+- **Client-Side Dynamic Filtering**: Category-level filtering and price sorting routines updating catalog state in real-time without page reload.
+- **Paginated Catalog Navigation**: Powered by `react-paginate` to seamlessly split 100+ product items into organized 10-item viewports with responsive controls.
+- **Modern Glassmorphic Header**: Fixed-position navigation with background blur styling, brand logo, and quick action controls.
+- **Automated GitHub Pages Deployment**: Preconfigured `gh-pages` build and deployment scripts in `package.json`.
+
+## Technology Stack
+- **Frontend Framework**: React.js (Component-based architecture, hooks, state management)
+- **Pagination Module**: `react-paginate`
+- **Data Source**: DummyJSON REST Schema (100+ items across multi-category product lines)
+- **Deployment**: GitHub Pages (gh-pages)
+
+## Steps to Run Locally
+1. Clone the repository: `git clone https://github.com/mr-mudgal/Product-List-React-App.git`
+2. Enter project directory: `cd Product-List-React-App`
+3. Install NPM dependencies: `npm install`
+4. Start React application: `npm start` (Runs on `http://localhost:3000`)
+5. Deploy to GitHub Pages: `npm run deploy`

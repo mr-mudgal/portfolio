@@ -3,64 +3,282 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Academic foundations, verified professional certifications, and technical credentials of Rishabh Mudgal — B.Tech CSE, Applied AI, Python, SQL, and Cloud Automation.">
     <meta name="theme-color" content="#090914">
-    <title>Education — Rishabh Mudgal</title>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <title>Credentials &amp; Qualifications — Rishabh Mudgal</title>
   </head>
   <body>
-    <div class="page-noise" aria-hidden="true"></div>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <!-- Interactive Generative Circuit & Wave Canvas -->
+    <canvas id="ambient-canvas" class="ambient-canvas" aria-hidden="true"></canvas>
+
     <div class="ambient ambient--one" aria-hidden="true"></div>
+    <div class="ambient ambient--two" aria-hidden="true"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <!-- Minimalist Floating Controls -->
+    <button class="theme-toggle-float" type="button" aria-label="Switch theme" aria-pressed="false" data-theme-toggle>
+      <span class="theme-toggle-float__icon">
+        <span class="theme-toggle-float__sun" aria-hidden="true">☀</span>
+        <span class="theme-toggle-float__moon" aria-hidden="true">◐</span>
+      </span>
+    </button>
+
+    <button class="back-to-top" type="button" aria-label="Scroll back to top" data-back-to-top>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m18 15-6-6-6 6"/>
+      </svg>
+    </button>
+
+    <!-- Interactive Certificate / Slideshow Modal -->
+    <div class="project-modal" data-project-modal aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="project-modal__backdrop" data-modal-backdrop></div>
+      <div class="project-modal__dialog">
+        <button class="project-modal__close" type="button" aria-label="Close modal" data-modal-close>✕</button>
+        <div data-modal-body>
+          <!-- Dynamically populated via script.js -->
+        </div>
+      </div>
+    </div>
 
     <header class="site-header" data-header>
-      <a class="brand" href="index.html"><span class="brand__mark">RM<span>.</span></span><span class="brand__label">Rishabh Mudgal</span></a>
-      <nav class="site-nav" id="site-navigation" data-navigation>
-        <a href="index.html">Approach</a><a href="projects.html">Projects</a><a href="experience.html">Experience</a><a class="is-active" href="education.html">Education</a><a href="#contact" class="nav-contact">Let’s talk <span>↗</span></a>
+      <a class="brand" href="index.html" aria-label="Rishabh Mudgal — Approach">
+        <span class="brand__mark">RM<span>.</span></span>
+        <span class="brand__label">Rishabh Mudgal</span>
+      </a>
+      <nav class="site-nav" id="site-navigation" aria-label="Primary navigation" data-navigation>
+        <a href="index.html">Approach</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="experience.html">Experience</a>
+        <a class="is-active" href="education.html">Credentials</a>
+        <a href="#contact" class="nav-contact">Let’s talk <span aria-hidden="true">↗</span></a>
       </nav>
-      <button class="theme-toggle" type="button" data-theme-toggle><span class="theme-toggle__sun">☀</span><span class="theme-toggle__moon">◐</span></button>
-      <button class="menu-toggle" type="button" aria-controls="site-navigation" data-menu-toggle><span></span><span></span></button>
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="site-navigation" aria-expanded="false" data-menu-toggle>
+        <span></span><span></span>
+      </button>
     </header>
 
     <main id="main-content">
-      <section class="section-shell page-intro">
+      <section class="section-shell page-intro" id="top">
         <div class="page-intro__grid" data-reveal>
-          <div><p class="eyebrow">04 — Education & Certifications</p><h1>My <em>foundation.</em></h1></div>
+          <div>
+            <p class="eyebrow">Academic &amp; Professional Foundation</p>
+            <h1>Engineering <em>credentials.</em></h1>
+          </div>
+          <p>Rigorous computer science degree foundations, algorithmic problem solving, and verified industry qualifications across Applied AI, data systems, and cloud backend engineering.</p>
         </div>
       </section>
 
-      <section class="section-shell credentials" data-reveal>
-        <div>
-          <p class="eyebrow">Academics</p>
-          <div class="credentials__education">
-            <h3>B.Tech in Computer Science & Engineering</h3>
-            <p>A.P.J. Abdul Kalam Technical University, Ghaziabad <span>·</span> 2024</p>
+      <section class="section-shell" data-reveal>
+        <!-- Hero Academic Degree Card -->
+        <div class="degree-card glass-card">
+          <div class="degree-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width: 2.8rem; height: 2.8rem;">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+            </svg>
+          </div>
+          <div class="degree-card__info">
+            <p class="degree-card__meta">2020 — 2024 · Bachelor of Technology</p>
+            <h3>Computer Science and Engineering</h3>
+            <p class="degree-card__desc">A.P.J. Abdul Kalam Technical University, Ghaziabad</p>
+            <p class="degree-card__desc">Comprehensive curriculum covering computer science fundamentals, data structures, algorithms, operating systems, relational database architecture, distributed networks, and machine intelligence foundations.</p>
+            <div class="hero__chips" style="margin-top: 1rem;">
+              <li>Data Structures &amp; Algorithms</li>
+              <li>Operating Systems</li>
+              <li>Database Management</li>
+              <li>Object-Oriented Design</li>
+              <li>Computer Networks</li>
+            </div>
           </div>
         </div>
-        <div>
-          <p class="eyebrow">Certifications</p>
-          <div class="credential-list">
-            <span>Python Programming (HackerRank)</span>
-            <span>SQL Database Management (HackerRank)</span>
-            <span>Data Science with Python (Great Learning)</span>
-            <span>Data Visualization (Great Learning)</span>
-            <span>Power BI (Great Learning)</span>
-            <span>Selenium Automation (Google Developers)</span>
+
+        <!-- Verified Certifications Section with Interactive Filter Bar -->
+        <div class="cert-section" data-reveal>
+          <p class="eyebrow">Verified Industry Qualifications</p>
+          <h3>Professional Certifications &amp; Credentials</h3>
+
+          <!-- Filter Bar -->
+          <div class="cert-filter-bar" role="tablist" aria-label="Filter certificates by category">
+            <button class="cert-filter-pill is-active" type="button" data-filter="all">All Credentials</button>
+            <button class="cert-filter-pill" type="button" data-filter="ai">AI &amp; Machine Learning</button>
+            <button class="cert-filter-pill" type="button" data-filter="data">Data Science &amp; Analytics</button>
+            <button class="cert-filter-pill" type="button" data-filter="python">Python &amp; Backend</button>
+            <button class="cert-filter-pill" type="button" data-filter="devops">DevOps &amp; Cloud</button>
+            <button class="cert-filter-pill" type="button" data-filter="security">Security &amp; Testing</button>
+            <button class="cert-filter-pill" type="button" data-filter="frontend">Frontend &amp; Core</button>
+          </div>
+
+          <div class="cert-grid">
+            <!-- Dynamically populated via data/certificates-data.js & script.js -->
+          </div>
+        </div>
+
+        <!-- Technical Domain Matrix -->
+        <div class="cert-section" data-reveal>
+          <p class="eyebrow">Competency Areas</p>
+          <h3>Core Knowledge Domains</h3>
+          <div class="domain-grid">
+            <article class="domain-card glass-card">
+              <h4>🧠 Applied AI &amp; LLM Workflows</h4>
+              <p>Prompt engineering, JSON-constrained formatting, local inference (Ollama, DeepSeek, Qwen), SuryaOCR, and RAG pipelines.</p>
+            </article>
+            <article class="domain-card glass-card">
+              <h4>⚡ High-Speed Backend APIs</h4>
+              <p>FastAPI, Flask, Django, Asyncio, token-based authentication, error middleware, and microservice architectures.</p>
+            </article>
+            <article class="domain-card glass-card">
+              <h4>🗄️ Relational &amp; Vector Data Systems</h4>
+              <p>PostgreSQL schema design, query optimization, indexing, SQLAlchemy, Qdrant/Chroma vector search, and NoSQL.</p>
+            </article>
+            <article class="domain-card glass-card">
+              <h4>🚀 DevOps &amp; Cloud GPU Orchestration</h4>
+              <p>Docker containerization, RunPod GPU instances, AWS (EC2, S3), Linux system administration, and CI/CD pipelines.</p>
+            </article>
           </div>
         </div>
       </section>
     </main>
 
-    <section class="skill-ticker" aria-label="Tools and technologies"><div class="skill-ticker__track"><span>Python</span><i>✦</i><span>FastAPI</span><i>✦</i><span>LLM Workflows</span><i>✦</i><span>PyTorch</span><i>✦</i><span>PostgreSQL</span><i>✦</i><span>Docker</span><i>✦</i><span>OCR Systems</span><i>✦</i><span>Automation</span><i>✦</i><span>Python</span><i>✦</i><span>FastAPI</span><i>✦</i><span>LLM Workflows</span><i>✦</i><span>PyTorch</span><i>✦</i><span>PostgreSQL</span><i>✦</i><span>Docker</span><i>✦</i><span>OCR Systems</span><i>✦</i><span>Automation</span><i>✦</i></div></section>
-    <section class="section-shell contact contact--expanded" id="contact">
-      <div class="contact__glow" aria-hidden="true"></div>
-      <div class="contact__content" data-reveal><p class="eyebrow">Let’s make contact</p><h2>Have an idea worth<br><em>making useful?</em></h2><p>I’m interested in backend and applied-AI opportunities where careful engineering can turn a promising idea into a dependable product.</p></div>
-      <div class="contact__channels" data-reveal data-reveal-delay="100">
-        <a class="contact-channel" href="mailto:work.mudgal@proton.me"><span class="contact-channel__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="contact-channel__copy"><small>Email</small><strong>work.mudgal@proton.me</strong></span><span class="contact-channel__arrow" aria-hidden="true">↗</span></a>
-        <a class="contact-channel" href="https://linkedin.com/in/mr-mudgal" target="_blank" rel="noreferrer"><span class="contact-channel__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 8.3A1.9 1.9 0 1 0 6.5 4.5a1.9 1.9 0 0 0 0 3.8ZM4.8 9.8h3.4V20H4.8V9.8Zm5.5 0h3.2v1.4h.1c.5-.9 1.7-1.8 3.6-1.8 3.8 0 4.5 2.4 4.5 5.6v5h-3.4v-4.4c0-1.1 0-2.5-1.6-2.5s-1.9 1.2-1.9 2.4V20h-3.4V9.8Z"/></svg></span><span class="contact-channel__copy"><small>Connect</small><strong>LinkedIn</strong></span><span class="contact-channel__arrow" aria-hidden="true">↗</span></a>
-        <a class="contact-channel" href="https://github.com/mr-mudgal" target="_blank" rel="noreferrer"><span class="contact-channel__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6a9.5 9.5 0 0 0-3 18.5c.5.1.6-.2.6-.5v-1.9c-2.5.5-3-1.1-3-1.1-.4-1-.9-1.3-.9-1.3-.8-.5.1-.5.1-.5.9.1 1.4 1 1.4 1 .8 1.4 2 1 2.5.8.1-.6.3-1 .6-1.2-2-.2-4.1-1-4.1-4.4 0-1 .4-1.8 1-2.4-.1-.2-.4-1.1.1-2.4 0 0 .8-.3 2.5.9A8.6 8.6 0 0 1 12 8c.8 0 1.5.1 2.2.3 1.7-1.2 2.5-.9 2.5-.9.5 1.3.2 2.2.1 2.4.6.7 1 1.5 1 2.4 0 3.4-2.1 4.2-4.1 4.4.3.3.6.8.6 1.6v2.4c0 .2.2.6.6.5A9.5 9.5 0 0 0 12 2.6Z"/></svg></span><span class="contact-channel__copy"><small>Explore</small><strong>GitHub</strong></span><span class="contact-channel__arrow" aria-hidden="true">↗</span></a>
+    <section class="skill-ticker" aria-label="Tools and technologies">
+      <div class="skill-ticker__track">
+        <span>Python</span><i>✦</i><span>FastAPI</span><i>✦</i><span>LLM Workflows</span><i>✦</i><span>PyTorch</span><i>✦</i><span>PostgreSQL</span><i>✦</i><span>Docker</span><i>✦</i><span>SuryaOCR</span><i>✦</i><span>RunPod GPUs</span><i>✦</i><span>Automation</span><i>✦</i><span>Python</span><i>✦</i><span>FastAPI</span><i>✦</i><span>LLM Workflows</span><i>✦</i><span>PyTorch</span><i>✦</i><span>PostgreSQL</span><i>✦</i><span>Docker</span><i>✦</i><span>SuryaOCR</span><i>✦</i><span>RunPod GPUs</span><i>✦</i><span>Automation</span><i>✦</i>
       </div>
     </section>
-    <footer class="site-footer section-shell"><a class="brand" href="#top" aria-label="Back to the top"><span class="brand__mark">RM<span>.</span></span></a><p>Crafted with curiosity, code, and a practical point of view.</p><p>© <span data-year></span> Rishabh Mudgal</p></footer>
+
+    <!-- Contact Section with Resume Showcase Box -->
+    <section class="section-shell contact contact--expanded" id="contact">
+      <div class="contact__glow" aria-hidden="true"></div>
+      <div class="contact__content" data-reveal>
+        <p class="eyebrow">Let’s Connect</p>
+        <h2>Have an idea worth<br><em>making useful?</em></h2>
+        <p>I’m interested in backend and applied-AI opportunities where careful engineering can turn a promising idea into a dependable product.</p>
+      </div>
+
+      <!-- Resume Action Box -->
+      <div class="resume-action-box" data-reveal>
+        <div class="resume-action-box__info">
+          <div class="resume-action-box__icon" aria-hidden="true">📄</div>
+          <div class="resume-action-box__text">
+            <strong>Rishabh Mudgal — Resume</strong>
+            <span>Curriculum Vitae · Backend &amp; Applied AI Engineer</span>
+          </div>
+        </div>
+        <div class="resume-action-box__btns">
+          <a class="button button--primary" href="media/resume.pdf" download>Download Resume <span>↓</span></a>
+          <a class="button button--secondary" href="media/resume.pdf" target="_blank">Open in New Tab <span>↗</span></a>
+          <button class="button button--secondary" type="button" data-resume-preview>Quick Preview <span>✦</span></button>
+        </div>
+      </div>
+
+      <div class="contact__channels" data-reveal data-reveal-delay="100">
+        <a class="contact-channel" href="mailto:work.mudgal@proton.me">
+          <span class="contact-channel__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="contact-channel__copy"><small>Email</small><strong>work.mudgal@proton.me</strong></span><span class="contact-channel__arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="contact-channel" href="https://linkedin.com/in/mr-mudgal" target="_blank" rel="noreferrer">
+          <span class="contact-channel__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 8.3A1.9 1.9 0 1 0 6.5 4.5a1.9 1.9 0 0 0 0 3.8ZM4.8 9.8h3.4V20H4.8V9.8Zm5.5 0h3.2v1.4h.1c.5-.9 1.7-1.8 3.6-1.8 3.8 0 4.5 2.4 4.5 5.6v5h-3.4v-4.4c0-1.1 0-2.5-1.6-2.5s-1.9 1.2-1.9 2.4V20h-3.4V9.8Z"/></svg></span>
+          <span class="contact-channel__copy"><small>Connect</small><strong>LinkedIn</strong></span><span class="contact-channel__arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="contact-channel" href="https://github.com/mr-mudgal" target="_blank" rel="noreferrer">
+          <span class="contact-channel__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6a9.5 9.5 0 0 0-3 18.5c.5.1.6-.2.6-.5v-1.9c-2.5.5-3-1.1-3-1.1-.4-1-.9-1.3-.9-1.3-.8-.5.1-.5.1-.5.9.1 1.4 1 1.4 1 .8 1.4 2 1 2.5.8.1-.6.3-1 .6-1.2-2-.2-4.1-1-4.1-4.4 0-1 .4-1.8 1-2.4-.1-.2-.4-1.1.1-2.4 0 0 .8-.3 2.5.9A8.6 8.6 0 0 1 12 8c.8 0 1.5.1 2.2.3 1.7-1.2 2.5-.9 2.5-.9.5 1.3.2 2.2.1 2.4.6.7 1 1.5 1 2.4 0 3.4-2.1 4.2-4.1 4.4.3.3.6.8.6 1.6v2.4c0 .2.2.6.6.5A9.5 9.5 0 0 0 12 2.6Z"/></svg></span>
+          <span class="contact-channel__copy"><small>Explore</small><strong>GitHub</strong></span><span class="contact-channel__arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <footer class="site-footer section-shell" role="contentinfo">
+      <div class="footer-card" data-reveal>
+        <div class="footer-main">
+          <!-- Brand & Role Summary -->
+          <div class="footer-brand-col">
+            <a class="brand brand--footer" href="#top" aria-label="Rishabh Mudgal — Back to Top">
+              <span class="brand__mark">RM<span>.</span></span>
+              <span class="brand__label">Rishabh Mudgal</span>
+            </a>
+            <p class="footer-bio">
+              AI Engineer &amp; Systems Architect specializing in autonomous agentic workflows, multimodal vision-language intelligence, and production-grade LLM orchestration.
+            </p>
+            <div class="footer-status-pill">
+              <span class="status-pulse-dot" aria-hidden="true"></span>
+              <span>Available for Applied AI &amp; Architecture Roles</span>
+            </div>
+          </div>
+
+          <!-- Navigation / Systems -->
+          <div class="footer-nav-col">
+            <h4 class="footer-heading">Architecture</h4>
+            <nav class="footer-links" aria-label="Site Navigation">
+              <a href="index.html">Approach &amp; Philosophy</a>
+              <a href="services.html">Services &amp; Capabilities</a>
+              <a href="projects.html">Featured Systems</a>
+              <a href="experience.html">Engineering Experience</a>
+              <a href="education.html">Credentials &amp; Certifications</a>
+            </nav>
+          </div>
+
+          <!-- Core Domains -->
+          <div class="footer-nav-col">
+            <h4 class="footer-heading">Core Domains</h4>
+            <ul class="footer-stack-list">
+              <li><span>Agentic Orchestration &amp; LangGraph</span></li>
+              <li><span>Multimodal Vision-Language Models</span></li>
+              <li><span>High-Throughput vLLM &amp; CUDA</span></li>
+              <li><span>Full-Stack AI Interfaces</span></li>
+            </ul>
+          </div>
+
+          <!-- Direct Channels -->
+          <div class="footer-nav-col">
+            <h4 class="footer-heading">Direct Channels</h4>
+            <nav class="footer-links" aria-label="Direct Contact Links">
+              <a href="mailto:work.mudgal@proton.me" class="footer-link-highlight">
+                <svg class="footer-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+                <span>work.mudgal@proton.me</span>
+                <span class="footer-arrow" aria-hidden="true">↗</span>
+              </a>
+              <a href="https://linkedin.com/in/mr-mudgal" target="_blank" rel="noreferrer">
+                <svg class="footer-link-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.5 8.3A1.9 1.9 0 1 0 6.5 4.5a1.9 1.9 0 0 0 0 3.8ZM4.8 9.8h3.4V20H4.8V9.8Zm5.5 0h3.2v1.4h.1c.5-.9 1.7-1.8 3.6-1.8 3.8 0 4.5 2.4 4.5 5.6v5h-3.4v-4.4c0-1.1 0-2.5-1.6-2.5s-1.9 1.2-1.9 2.4V20h-3.4V9.8Z"/></svg>
+                <span>LinkedIn Profile</span>
+                <span class="footer-arrow" aria-hidden="true">↗</span>
+              </a>
+              <a href="https://github.com/mr-mudgal" target="_blank" rel="noreferrer">
+                <svg class="footer-link-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6a9.5 9.5 0 0 0-3 18.5c.5.1.6-.2.6-.5v-1.9c-2.5.5-3-1.1-3-1.1-.4-1-.9-1.3-.9-1.3-.8-.5.1-.5.1-.5.9.1 1.4 1 1.4 1 .8 1.4 2 1 2.5.8.1-.6.3-1 .6-1.2-2-.2-4.1-1-4.1-4.4 0-1 .4-1.8 1-2.4-.1-.2-.4-1.1.1-2.4 0 0 .8-.3 2.5.9A8.6 8.6 0 0 1 12 8c.8 0 1.5.1 2.2.3 1.7-1.2 2.5-.9 2.5-.9.5 1.3.2 2.2.1 2.4.6.7 1 1.5 1 2.4 0 3.4-2.1 4.2-4.1 4.4.3.3.6.8.6 1.6v2.4c0 .2.2.6.6.5A9.5 9.5 0 0 0 12 2.6Z"/></svg>
+                <span>GitHub Repositories</span>
+                <span class="footer-arrow" aria-hidden="true">↗</span>
+              </a>
+              <a href="media/resume.pdf" target="_blank" rel="noreferrer">
+                <svg class="footer-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                <span>Curriculum Vitae</span>
+                <span class="footer-arrow" aria-hidden="true">↗</span>
+              </a>
+            </nav>
+          </div>
+        </div>
+
+        <!-- Sub-Footer / Meta -->
+        <div class="footer-bottom">
+          <div class="footer-bottom__copy">
+            <p>© <span data-year></span> Rishabh Mudgal. Built with intent, rigorous engineering &amp; precision.</p>
+          </div>
+          <div class="footer-bottom__meta">
+            <span class="footer-badge"><span class="badge-dot" aria-hidden="true"></span> Production Systems</span>
+            <a href="#top" class="footer-back-to-top" aria-label="Back to top">
+              <span>Back to Top</span>
+              <span class="footer-back-arrow" aria-hidden="true">↑</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="data/projects-data.js"></script>
+    <script src="data/certificates-data.js"></script>
     <script src="script.js" defer></script>
   </body>
 </html>

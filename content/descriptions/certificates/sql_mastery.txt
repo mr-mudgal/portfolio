@@ -1,0 +1,1 @@
+Dual-verified certification demonstrating advanced relational SQL database engineering—specializing in complex multi-table joins, analytical window functions, Common Table Expressions (CTEs), B-tree indexing strategies, execution plan query optimization, and schema normalization.

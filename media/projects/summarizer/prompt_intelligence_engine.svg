@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 560" width="100%" height="100%">
+  <defs>
+    <linearGradient id="promptBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d18" />
+      <stop offset="100%" stop-color="#04060c" />
+    </linearGradient>
+    <linearGradient id="codeBox" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#070b14" />
+    </linearGradient>
+  </defs>
+
+  <rect width="940" height="560" rx="16" fill="url(#promptBg)" stroke="#1a273b" stroke-width="1.5" />
+
+  <!-- Top Title Bar -->
+  <rect width="940" height="46" rx="16" fill="#0c1320" />
+  <rect y="30" width="940" height="16" fill="#0c1320" />
+  <line x1="0" y1="46" x2="940" y2="46" stroke="#1c2c42" stroke-width="1" />
+
+  <circle cx="26" cy="23" r="6" fill="#ff5f56" />
+  <circle cx="46" cy="23" r="6" fill="#ffbd2e" />
+  <circle cx="66" cy="23" r="6" fill="#27c93f" />
+
+  <text x="470" y="28" fill="#8ba0b8" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="600" text-anchor="middle">
+    Dynamic Prompt Engineering &amp; Non-Lossy Summarization Engine (DeepSeek-R1 8B)
+  </text>
+
+  <!-- Left: Raw Input Stream -->
+  <g transform="translate(35, 65)">
+    <rect width="260" height="460" rx="12" fill="url(#codeBox)" stroke="#23354d" stroke-width="1" />
+    <rect x="0" y="0" width="260" height="36" rx="12" fill="#131d2e" />
+    <rect x="0" y="22" width="260" height="14" fill="#131d2e" />
+    <line x1="0" y1="36" x2="260" y2="36" stroke="#1c2c42" stroke-width="1" />
+    <text x="16" y="23" fill="#4fe0ff" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">RAW ARTICLE INGESTION</text>
+
+    <!-- Raw text blocks -->
+    <g transform="translate(16, 50)" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#7d8b99">
+      <text y="16" fill="#ffd166">Format: Technical Tutorial</text>
+      <text y="34" fill="#cbd5e1">Title: "Optimizing Local LLM</text>
+      <text y="50" fill="#cbd5e1">Inference on Apple Silicon"</text>
+      <text y="75" fill="#64748b">--- [Extracted DOM Text] ---</text>
+      <text y="95">When deploying quantized GGUF</text>
+      <text y="112">models locally with Ollama,</text>
+      <text y="129">memory allocation and context</text>
+      <text y="146">window size drastically impact</text>
+      <text y="163">tokens/sec throughput...</text>
+      <text y="188">[... 2,450 words scraped ...]</text>
+      <text y="215" fill="#e53e3e">Problems with naive summaries:</text>
+      <text y="232">• Loss of vital code commands</text>
+      <text y="249">• Hallucinated extra claims</text>
+      <text y="266">• Inconsistent generic bulleting</text>
+    </g>
+
+    <rect x="16" y="380" width="228" height="60" rx="8" fill="#0b121e" stroke="#253852" stroke-width="1" />
+    <text x="30" y="405" fill="#7a92ac" font-family="'JetBrains Mono', monospace" font-size="10">INPUT PAYLOAD DENSITY</text>
+    <text x="30" y="428" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="700">2,500 ~ 5,000 words</text>
+  </g>
+
+  <!-- Middle: Dynamic Prompt Controller -->
+  <g transform="translate(315, 65)">
+    <rect width="310" height="460" rx="12" fill="url(#codeBox)" stroke="#c7ff7b" stroke-width="1.5" />
+    <rect x="0" y="0" width="310" height="36" rx="12" fill="#13261a" />
+    <rect x="0" y="22" width="310" height="14" fill="#13261a" />
+    <line x1="0" y1="36" x2="310" y2="36" stroke="#1d3d28" stroke-width="1" />
+    <text x="16" y="23" fill="#c7ff7b" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">ADAPTIVE PROMPT INJECTION</text>
+
+    <g transform="translate(16, 50)" font-family="'JetBrains Mono', monospace" font-size="10.5">
+      <text y="16" fill="#a0aec0">SYSTEM_PROMPT_DIRECTIVES:</text>
+      <text y="38" fill="#c7ff7b">1. Non-Lossy Summarization</text>
+      <text y="54" fill="#7a92ac">   Preserve 100% of key ideas &amp; code.</text>
+      
+      <text y="80" fill="#c7ff7b">2. Content-Aware Formatting</text>
+      <text y="96" fill="#7a92ac">   • Tutorial: Step-by-step logic</text>
+      <text y="112" fill="#7a92ac">   • Listicle: Synthesized takeaway</text>
+      <text y="128" fill="#7a92ac">   • Opinion: Argument + proof points</text>
+
+      <text y="154" fill="#c7ff7b">3. Zero Hallucination Anchor</text>
+      <text y="170" fill="#7a92ac">   Anchor exclusively to article context.</text>
+
+      <text y="196" fill="#c7ff7b">4. Density Compression Rule</text>
+      <text y="212" fill="#7a92ac">   Eliminate intro fluff &amp; sponsorship.</text>
+      <text y="228" fill="#7a92ac">   Target 70% length compression.</text>
+    </g>
+
+    <rect x="16" y="320" width="278" height="120" rx="8" fill="#08180e" stroke="#27c93f" stroke-width="1" />
+    <text x="30" y="345" fill="#27c93f" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">INFERENCE ENGINE</text>
+    <text x="30" y="370" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="800">Ollama deepseek-r1:8b</text>
+    <text x="30" y="392" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="11">Quantized Q4_K_M · Local Mac Execution</text>
+    <text x="30" y="415" fill="#c7ff7b" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">⚡ High Tokens/Sec Throughput</text>
+  </g>
+
+  <!-- Right: Distilled Email Output -->
+  <g transform="translate(645, 65)">
+    <rect width="260" height="460" rx="12" fill="url(#codeBox)" stroke="#23354d" stroke-width="1" />
+    <rect x="0" y="0" width="260" height="36" rx="12" fill="#131d2e" />
+    <rect x="0" y="22" width="260" height="14" fill="#131d2e" />
+    <line x1="0" y1="36" x2="260" y2="36" stroke="#1c2c42" stroke-width="1" />
+    <text x="16" y="23" fill="#4fe0ff" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">DISTILLED MORNING DIGEST</text>
+
+    <g transform="translate(16, 50)" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#cbd5e1">
+      <text y="16" fill="#4fe0ff">📧 Delivered to Inbox (7:30 AM)</text>
+      <text y="42" fill="#ffffff" font-weight="700">📌 Key Takeaways:</text>
+      <text y="62" fill="#c7ff7b">1. Memory Headroom</text>
+      <text y="78" fill="#a0aec0">   Set context window to 8k</text>
+      <text y="94" fill="#a0aec0">   for optimal M-series unified RAM.</text>
+
+      <text y="120" fill="#c7ff7b">2. Quantization Trade-offs</text>
+      <text y="136" fill="#a0aec0">   Q4_K_M retains 99.2% accuracy</text>
+      <text y="152" fill="#a0aec0">   while reducing footprint 65%.</text>
+
+      <text y="180" fill="#c7ff7b">3. Step-by-Step Command</text>
+      <text y="198" fill="#ffd166">   $ ollama run deepseek-r1:8b</text>
+
+      <text y="235" fill="#9d4edd">⏱️ Reading Time Saved: 12 min</text>
+      <text y="255" fill="#4fe0ff">🔗 Original Paywall URL: Preserved</text>
+    </g>
+
+    <rect x="16" y="380" width="228" height="60" rx="8" fill="#0b121e" stroke="#253852" stroke-width="1" />
+    <text x="30" y="405" fill="#7a92ac" font-family="'JetBrains Mono', monospace" font-size="10">DIGEST COMPRESSION</text>
+    <text x="30" y="428" fill="#27c93f" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="700">100% Insight / 30% Size</text>
+  </g>
+</svg>

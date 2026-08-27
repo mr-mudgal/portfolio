@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 560" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080c16" />
+      <stop offset="50%" stop-color="#04070d" />
+      <stop offset="100%" stop-color="#020306" />
+    </linearGradient>
+    <linearGradient id="cardGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141e30" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0b111e" stop-opacity="0.95" />
+    </linearGradient>
+    <linearGradient id="glowCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4fe0ff" />
+      <stop offset="100%" stop-color="#00adb5" />
+    </linearGradient>
+    <filter id="neon" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Frame Background -->
+  <rect width="940" height="560" rx="16" fill="url(#bgGrad)" stroke="#1a273b" stroke-width="1.5" />
+
+  <!-- Top Title Bar -->
+  <rect width="940" height="46" rx="16" fill="#0c1320" />
+  <rect y="30" width="940" height="16" fill="#0c1320" />
+  <line x1="0" y1="46" x2="940" y2="46" stroke="#1c2c42" stroke-width="1" />
+
+  <circle cx="26" cy="23" r="6" fill="#ff5f56" />
+  <circle cx="46" cy="23" r="6" fill="#ffbd2e" />
+  <circle cx="66" cy="23" r="6" fill="#27c93f" />
+
+  <text x="470" y="28" fill="#8ba0b8" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="600" text-anchor="middle">
+    Medium Summarizer — End-to-End Offline AI Pipeline Architecture
+  </text>
+
+  <!-- Master Orchestrator Banner -->
+  <g transform="translate(40, 68)">
+    <rect x="0" y="0" width="860" height="60" rx="12" fill="#101a2c" stroke="#4fe0ff" stroke-width="1.5" stroke-dasharray="6,4" />
+    <text x="30" y="36" fill="#4fe0ff" font-family="'JetBrains Mono', monospace" font-size="15" font-weight="700">JUST-RUN-ME.py</text>
+    <text x="180" y="36" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="13">
+      — Master Lifecycle Orchestrator · Ollama Service Manager · Error Handling &amp; Prerequisite Validation
+    </text>
+    <rect x="740" y="16" width="95" height="28" rx="6" fill="#0d2b38" stroke="#00adb5" stroke-width="1" />
+    <text x="787" y="34" fill="#4fe0ff" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" text-anchor="middle">7:30 AM CRON</text>
+  </g>
+
+  <!-- Connecting Bus Arrows -->
+  <path d="M 145 128 L 145 160" stroke="#4fe0ff" stroke-width="2" stroke-dasharray="4,3" fill="none" />
+  <path d="M 365 128 L 365 160" stroke="#4fe0ff" stroke-width="2" stroke-dasharray="4,3" fill="none" />
+  <path d="M 585 128 L 585 160" stroke="#4fe0ff" stroke-width="2" stroke-dasharray="4,3" fill="none" />
+  <path d="M 805 128 L 805 160" stroke="#4fe0ff" stroke-width="2" stroke-dasharray="4,3" fill="none" />
+
+  <!-- Step 1: Email Fetcher -->
+  <g transform="translate(40, 160)">
+    <rect width="195" height="230" rx="12" fill="url(#cardGrad1)" stroke="#23354d" stroke-width="1.2" />
+    <rect x="14" y="14" width="34" height="34" rx="8" fill="#1b2a40" />
+    <text x="31" y="36" fill="#4fe0ff" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle">📧</text>
+    
+    <text x="56" y="28" fill="#7a92ac" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">STAGE 1</text>
+    <text x="56" y="44" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Email Scraper</text>
+    
+    <line x1="14" y1="58" x2="181" y2="58" stroke="#1d2e44" stroke-width="1" />
+    <text x="14" y="80" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="11.5">
+      <tspan x="14" dy="0">• medium_emails_scrapper.py</tspan>
+      <tspan x="14" dy="18">• Connects via Gmail IMAP</tspan>
+      <tspan x="14" dy="18">• Ingests Medium Daily Digest</tspan>
+      <tspan x="14" dy="18">• Extracts ~30 article links</tspan>
+      <tspan x="14" dy="18">• Auto-deletes raw email</tspan>
+    </text>
+    
+    <rect x="14" y="185" width="167" height="30" rx="6" fill="#0d1b2a" />
+    <text x="97" y="204" fill="#4fe0ff" font-family="'JetBrains Mono', monospace" font-size="10.5" text-anchor="middle">IMAP Protocol</text>
+  </g>
+
+  <!-- Step 2: Freedium Scraper -->
+  <g transform="translate(260, 160)">
+    <rect width="195" height="230" rx="12" fill="url(#cardGrad1)" stroke="#23354d" stroke-width="1.2" />
+    <rect x="14" y="14" width="34" height="34" rx="8" fill="#1b2a40" />
+    <text x="31" y="36" fill="#ffd166" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle">🔓</text>
+    
+    <text x="56" y="28" fill="#7a92ac" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">STAGE 2</text>
+    <text x="56" y="44" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Freedium Scraper</text>
+    
+    <line x1="14" y1="58" x2="181" y2="58" stroke="#1d2e44" stroke-width="1" />
+    <text x="14" y="80" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="11.5">
+      <tspan x="14" dy="0">• freedium_scrapper.py</tspan>
+      <tspan x="14" dy="18">• Selenium + ChromeDriver</tspan>
+      <tspan x="14" dy="18">• Bypasses paywall gateways</tspan>
+      <tspan x="14" dy="18">• Extracts full article DOM</tspan>
+      <tspan x="14" dy="18">• Saves raw .txt payloads</tspan>
+    </text>
+    
+    <rect x="14" y="185" width="167" height="30" rx="6" fill="#0d1b2a" />
+    <text x="97" y="204" fill="#ffd166" font-family="'JetBrains Mono', monospace" font-size="10.5" text-anchor="middle">Headless DOM Parsing</text>
+  </g>
+
+  <!-- Step 3: Ollama DeepSeek AI -->
+  <g transform="translate(480, 160)">
+    <rect width="205" height="230" rx="12" fill="url(#cardGrad1)" stroke="#c7ff7b" stroke-width="1.5" />
+    <rect x="14" y="14" width="34" height="34" rx="8" fill="#1b3024" />
+    <text x="31" y="36" fill="#c7ff7b" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle">🤖</text>
+    
+    <text x="56" y="28" fill="#c7ff7b" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">STAGE 3 · LOCAL AI</text>
+    <text x="56" y="44" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Ollama Summarizer</text>
+    
+    <line x1="14" y1="58" x2="191" y2="58" stroke="#1d3826" stroke-width="1" />
+    <text x="14" y="80" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="11.5">
+      <tspan x="14" dy="0">• summarizer_ollama.py</tspan>
+      <tspan x="14" dy="18">• deepseek-r1:8b (Offline)</tspan>
+      <tspan x="14" dy="18">• Dynamic Prompting Engine</tspan>
+      <tspan x="14" dy="18">• 70% length compression</tspan>
+      <tspan x="14" dy="18">• 100% data stays local</tspan>
+    </text>
+    
+    <rect x="14" y="185" width="177" height="30" rx="6" fill="#0a2618" stroke="#27c93f" stroke-width="1" />
+    <text x="102" y="204" fill="#c7ff7b" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" text-anchor="middle">Zero Cloud / Private</text>
+  </g>
+
+  <!-- Step 4: Dispatcher & Cleanup -->
+  <g transform="translate(705, 160)">
+    <rect width="195" height="230" rx="12" fill="url(#cardGrad1)" stroke="#23354d" stroke-width="1.2" />
+    <rect x="14" y="14" width="34" height="34" rx="8" fill="#1b2a40" />
+    <text x="31" y="36" fill="#9d4edd" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle">📬</text>
+    
+    <text x="56" y="28" fill="#7a92ac" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">STAGE 4</text>
+    <text x="56" y="44" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Email Dispatcher</text>
+    
+    <line x1="14" y1="58" x2="181" y2="58" stroke="#1d2e44" stroke-width="1" />
+    <text x="14" y="80" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="11.5">
+      <tspan x="14" dy="0">• send_me.py</tspan>
+      <tspan x="14" dy="18">• Concatenates summaries</tspan>
+      <tspan x="14" dy="18">• Sends via Gmail SMTP</tspan>
+      <tspan x="14" dy="18">• Purges temp output files</tspan>
+      <tspan x="14" dy="18">• Updates dedup tracker</tspan>
+    </text>
+    
+    <rect x="14" y="185" width="167" height="30" rx="6" fill="#0d1b2a" />
+    <text x="97" y="204" fill="#9d4edd" font-family="'JetBrains Mono', monospace" font-size="10.5" text-anchor="middle">SMTP + Auto-Clean</text>
+  </g>
+
+  <!-- Flow Arrows between cards -->
+  <path d="M 237 275 L 257 275" stroke="#4fe0ff" stroke-width="2" marker-end="url(#arrow)" />
+  <path d="M 457 275 L 477 275" stroke="#4fe0ff" stroke-width="2" />
+  <path d="M 687 275 L 703 275" stroke="#4fe0ff" stroke-width="2" />
+
+  <!-- Bottom Metric Badges -->
+  <g transform="translate(40, 415)">
+    <rect width="860" height="110" rx="12" fill="#0a101c" stroke="#1c2c42" stroke-width="1" />
+
+    <g transform="translate(25, 20)">
+      <text x="0" y="20" fill="#7a92ac" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">DAILY CAPACITY</text>
+      <text x="0" y="52" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="22" font-weight="800">30 Articles</text>
+      <text x="0" y="72" fill="#4fe0ff" font-family="system-ui, sans-serif" font-size="11.5">Every morning digest</text>
+    </g>
+
+    <g transform="translate(235, 20)">
+      <text x="0" y="20" fill="#7a92ac" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">AI INFERENCE MODEL</text>
+      <text x="0" y="52" fill="#c7ff7b" font-family="'JetBrains Mono', monospace" font-size="20" font-weight="800">DeepSeek-R1 (8B)</text>
+      <text x="0" y="72" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="11.5">Ollama local execution</text>
+    </g>
+
+    <g transform="translate(470, 20)">
+      <text x="0" y="20" fill="#7a92ac" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">LENGTH COMPRESSION</text>
+      <text x="0" y="52" fill="#ffd166" font-family="'JetBrains Mono', monospace" font-size="22" font-weight="800">~70% Reduction</text>
+      <text x="0" y="72" fill="#a0aec0" font-family="system-ui, sans-serif" font-size="11.5">100% key insights kept</text>
+    </g>
+
+    <g transform="translate(680, 20)">
+      <text x="0" y="20" fill="#7a92ac" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">CLOUD SUBSCRIPTIONS</text>
+      <text x="0" y="52" fill="#27c93f" font-family="'JetBrains Mono', monospace" font-size="22" font-weight="800">$0.00 / mo</text>
+      <text x="0" y="72" fill="#27c93f" font-family="system-ui, sans-serif" font-size="11.5">Zero API keys / offline</text>
+    </g>
+  </g>
+</svg>

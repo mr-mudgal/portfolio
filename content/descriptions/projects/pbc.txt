@@ -1,0 +1,20 @@
+# Password Breach Checker & Security Auditor
+
+A privacy-first cybersecurity utility built with Python and Django that checks whether passwords have been exposed in known data breaches using the HaveIBeenPwned API and client-safe SHA256 cryptographic hashing without storing sensitive credentials.
+
+## Core Features & Architecture
+- **Zero-Knowledge Cryptography**: Computes SHA256 hashes locally via Python's `hashlib` before dispatching requests, ensuring cleartext credentials are never saved, logged, or retained.
+- **HaveIBeenPwned API Integration**: Rapid query verification against billions of leaked credentials across historical data breaches.
+- **Immediate Threat Intelligence**: Color-coded feedback indicating clean credentials (green) or exact breach exposure counts (red alert).
+- **mkcert HTTPS TLS Configuration**: Local SSL certificate generation using `mkcert` to enforce secure HTTPS transmission in development.
+- **AWS EC2 Cloud Deployment**: Hosted on Amazon Web Services (AWS) EC2 compute instance with dedicated Elastic IP routing.
+
+## Technology Stack
+- **Backend**: Python 3.x, Django Framework
+- **Security & Cryptography**: SHA256 (hashlib), HaveIBeenPwned API, mkcert (HTTPS TLS)
+- **Infrastructure**: AWS EC2, Elastic IP
+
+## Steps to Run Locally
+1. Clone the repository: `git clone https://github.com/mr-mudgal/Password-Breach-Checker.git`
+2. Install dependencies: `pip install -r requirements.txt`
+3. Run local server: `python manage.py runserver` (Access via browser)

@@ -1,0 +1,23 @@
+# Cab Rides Pricing Dynamics & Surge Multiplier Analytics
+
+A comprehensive data analytics and visualization study examining multi-variable cab ride pricing dynamics, surge multiplier impacts, temporal demand patterns, and vehicle class revenue contributions across 600,000+ ride transactions.
+
+## Analytical Inquiries & Key Findings
+- **Temporal & Seasonal Revenue Concentration**: December 2018 accounted for 20% of annual revenue, with peak evening hours (18:00–20:00) generating over 30% of daily ride income.
+- **Surge Multiplier Dynamics**: 70% of rides operated at base fare (1.0x surge), while high-tier surges (≥2.0x) were concentrated in premium services (Lux Black, Uber Black), exhibiting a 0.50 correlation with final gross fare.
+- **Trip Distance & Revenue Distribution**: Short-to-medium trips (3–5 miles) dominated aggregate revenue generation (60% of total revenue).
+- **Service Tier Economics**: Premium services like Lux Black XL and Black SUV led total gross revenue generation, while Shared rides contributed the least (2.8%).
+
+## Tools & Technical Architecture
+- **Language & Libraries**: Python 3.x, Pandas (Data Wrangling & Feature Engineering), Matplotlib, Seaborn
+- **Development Environment**: Spyder IDE / Jupyter
+- **Business Intelligence**: Power BI Interactive Dashboard, Microsoft Excel Pivot Tables & Analytical Models
+
+## Interactive Dashboards & Datasets
+- **Power BI Dashboard**: [Interactive Power BI Report](https://1drv.ms/u/c/f4db7ebe1d9e80c7/ETQS11CyKzZCgNxoXROWCyABXKY8UhXXfKnbxgzzsKPpCw?e=2DhegW)
+- **Excel Analytical Workbook**: [Excel Workbook with Pivot Models](https://1drv.ms/x/c/f4db7ebe1d9e80c7/ESOM9U_zvjxOl59FOzpunqIBTMbj3Pi51Jzcvwi1GP89ww?e=Mlojvw)
+
+## Steps to Run Locally
+1. Clone the repository: `git clone https://github.com/mr-mudgal/cab-rides-analysis.git`
+2. Install analytical dependencies: `pip install pandas matplotlib seaborn`
+3. Execute analytics script: `python cab_rides_analysis.py` (Outputs all statistical plots and correlation matrices).

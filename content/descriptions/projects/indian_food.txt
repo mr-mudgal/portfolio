@@ -1,0 +1,23 @@
+# Indian Cuisine Culinary Analytics & Flavor Profile Mining
+
+An extensive exploratory data analysis and culinary intelligence study mining dietary preferences, regional dish distributions, flavor spectrums, preparation timelines, and ingredient dependencies across authentic Indian regional cuisines.
+
+## Key Analytical Findings & Insights
+- **Dietary Composition**: Vegetarian preparations represent 88.6% of the national dataset, reaching 100% in Western states such as Gujarat.
+- **Flavor Profile Taxonomy**: Spicy preparations dominate 52.2% of recorded dishes, with sweet courses comprising 34.5% (concentrated heavily in West and East India).
+- **Culinary Time Economics**: 60% of all recipes require between 30 and 120 minutes of preparation, with mean cook time (34 min) outpacing prep time (30 min).
+- **Ingredient Centrality**: Urad Dal, Ghee, Sugar, and Ginger represent dominant culinary anchors across vegetarian and non-vegetarian dishes.
+
+## Tools & Technical Architecture
+- **Language & Analytics**: Python 3.x, Pandas (Data Cleaning & Categorical Binning), Matplotlib, Seaborn, WordCloud
+- **Development Environment**: Spyder IDE / Jupyter
+- **Business Intelligence**: Power BI Interactive Culinary Dashboard, Microsoft Excel Pivot Tables & Analytical Models
+
+## Interactive Dashboards & Datasets
+- **Power BI Dashboard**: [Interactive Power BI Culinary Report](https://1drv.ms/u/c/f4db7ebe1d9e80c7/ESw0GI8nAYlCpfrMIaLICO8BsrNNoI39MsQoA5BnVWsbeQ?e=pagtWa)
+- **Excel Analytical Workbook**: [Excel Workbook with Pivot Analysis](https://1drv.ms/x/c/f4db7ebe1d9e80c7/EYBzRJGXz_tDhP0pM5wjOuoBesNR0f2nkfJenfpJoZ_cug?e=E6eyqu)
+
+## Steps to Run Locally
+1. Clone the repository: `git clone https://github.com/mr-mudgal/indian-food-analysis.git`
+2. Install analytical dependencies: `pip install pandas matplotlib seaborn wordcloud`
+3. Execute analysis script: `python indian_food_analysis.py` (Generates all 18 visualizations and statistical summaries).

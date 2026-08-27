@@ -1,0 +1,3 @@
+# Certificate Description Template
+# Write a concise summary of the skills, curriculum, and capabilities verified by this certificate.
+Deep dive into core domain concepts, practical implementations, hands-on architectural design, and industry standard verification.

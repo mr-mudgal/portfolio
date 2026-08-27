@@ -1,0 +1,138 @@
+<svg viewBox="0 0 960 520" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0d1b"/>
+      <stop offset="100%" stop-color="#141126"/>
+    </linearGradient>
+    <linearGradient id="card-grad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1c2242"/>
+      <stop offset="100%" stop-color="#101328"/>
+    </linearGradient>
+    <linearGradient id="card-grad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2d1c3a"/>
+      <stop offset="100%" stop-color="#150f22"/>
+    </linearGradient>
+    <linearGradient id="card-grad3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#192c30"/>
+      <stop offset="100%" stop-color="#0f1b20"/>
+    </linearGradient>
+    <linearGradient id="card-grad4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2c2817"/>
+      <stop offset="100%" stop-color="#18150c"/>
+    </linearGradient>
+    <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="glow-pink" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="960" height="520" fill="url(#bg-gradient)"/>
+  <rect x="15" y="15" width="930" height="490" rx="14" fill="none" stroke="#3b2b5c" stroke-width="1.5"/>
+
+  <!-- Top Title Header -->
+  <rect x="15" y="15" width="930" height="46" rx="14" fill="#161832"/>
+  <circle cx="40" cy="38" r="5" fill="#ff5f56"/>
+  <circle cx="58" cy="38" r="5" fill="#ffbd2e"/>
+  <circle cx="76" cy="38" r="5" fill="#27c93f"/>
+  <text x="105" y="42" fill="#c3c8e5" font-family="monospace" font-size="12" font-weight="600">CINEMATIC AI PODCAST &amp; AUDIO STORY GENERATION PIPELINE</text>
+  <rect x="760" y="26" width="165" height="24" rx="5" fill="#281e46" stroke="#b477ff" stroke-width="1"/>
+  <text x="842" y="42" fill="#b477ff" font-family="monospace" font-size="10.5" font-weight="bold" text-anchor="middle">⚡ QWEN2.5 + KOKORO</text>
+
+  <!-- 4 Step Pipeline Flow Boxes -->
+
+  <!-- STEP 1 -->
+  <g transform="translate(35, 85)">
+    <rect width="200" height="250" rx="10" fill="url(#card-grad1)" stroke="#6be7ff" stroke-width="1.5"/>
+    <rect width="200" height="34" rx="10" fill="#212c52"/>
+    <text x="15" y="22" fill="#6be7ff" font-family="sans-serif" font-size="12" font-weight="bold">1. INGEST &amp; CHUNK</text>
+    
+    <text x="15" y="60" fill="#8c91ff" font-family="monospace" font-size="10" font-weight="bold">Markdown Sanitizer</text>
+    <text x="15" y="82" fill="#c5cbdf" font-family="sans-serif" font-size="10.5">• Regex strip codeblocks</text>
+    <text x="15" y="102" fill="#c5cbdf" font-family="sans-serif" font-size="10.5">• Remove links &amp; bolding</text>
+    <text x="15" y="122" fill="#c5cbdf" font-family="sans-serif" font-size="10.5">• Strip markdown headers</text>
+    <text x="15" y="150" fill="#8c91ff" font-family="monospace" font-size="10" font-weight="bold">Dynamic Chunking</text>
+    <text x="15" y="172" fill="#c5cbdf" font-family="sans-serif" font-size="10.5">• max_chars: 2500</text>
+    <text x="15" y="192" fill="#c5cbdf" font-family="sans-serif" font-size="10.5">• Paragraph-aware split</text>
+    <text x="15" y="212" fill="#6be7ff" font-family="monospace" font-size="9.5">✓ Zero sentence cuts</text>
+  </g>
+
+  <!-- Arrow 1 -> 2 -->
+  <g transform="translate(242, 200)">
+    <line x1="0" y1="0" x2="16" y2="0" stroke="#6be7ff" stroke-width="2.5"/>
+    <polygon points="16,-5 24,0 16,5" fill="#6be7ff"/>
+  </g>
+
+  <!-- STEP 2 -->
+  <g transform="translate(270, 85)">
+    <rect width="200" height="250" rx="10" fill="url(#card-grad2)" stroke="#ff86c8" stroke-width="1.5"/>
+    <rect width="200" height="34" rx="10" fill="#3d2146"/>
+    <text x="15" y="22" fill="#ff86c8" font-family="sans-serif" font-size="12" font-weight="bold">2. QWEN-2.5 REWRITE</text>
+    
+    <text x="15" y="60" fill="#ffbd2e" font-family="monospace" font-size="10" font-weight="bold">Scripting Engine (7B)</text>
+    <text x="15" y="82" fill="#e8d5ec" font-family="sans-serif" font-size="10.5">• Instant hook opening</text>
+    <text x="15" y="102" fill="#e8d5ec" font-family="sans-serif" font-size="10.5">• Sensory ancient world</text>
+    <text x="15" y="122" fill="#e8d5ec" font-family="sans-serif" font-size="10.5">• Open loops / cliffhangers</text>
+    <text x="15" y="142" fill="#e8d5ec" font-family="sans-serif" font-size="10.5">• Female Indian narrator</text>
+    <text x="15" y="170" fill="#ff86c8" font-family="monospace" font-size="10" font-weight="bold">VRAM Memory Flush</text>
+    <text x="15" y="192" fill="#e8d5ec" font-family="sans-serif" font-size="10.5">• del model &amp; tokenizer</text>
+    <text x="15" y="212" fill="#c7ff7b" font-family="monospace" font-size="9.5">✓ gc.collect() cleared</text>
+  </g>
+
+  <!-- Arrow 2 -> 3 -->
+  <g transform="translate(477, 200)">
+    <line x1="0" y1="0" x2="16" y2="0" stroke="#ff86c8" stroke-width="2.5"/>
+    <polygon points="16,-5 24,0 16,5" fill="#ff86c8"/>
+  </g>
+
+  <!-- STEP 3 -->
+  <g transform="translate(505, 85)">
+    <rect width="200" height="250" rx="10" fill="url(#card-grad3)" stroke="#c7ff7b" stroke-width="1.5"/>
+    <rect width="200" height="34" rx="10" fill="#1b393b"/>
+    <text x="15" y="22" fill="#c7ff7b" font-family="sans-serif" font-size="12" font-weight="bold">3. KOKORO NEURAL TTS</text>
+    
+    <text x="15" y="60" fill="#6be7ff" font-family="monospace" font-size="10" font-weight="bold">Voice Blend Matrix</text>
+    <text x="15" y="82" fill="#daf2e1" font-family="sans-serif" font-size="10.5">• 70% hf_alpha (Indian)</text>
+    <text x="15" y="102" fill="#daf2e1" font-family="sans-serif" font-size="10.5">• 30% af_heart (Warm)</text>
+    <text x="15" y="122" fill="#daf2e1" font-family="sans-serif" font-size="10.5">• Speed: 0.82x cinematic</text>
+    <text x="15" y="150" fill="#c7ff7b" font-family="monospace" font-size="10" font-weight="bold">Text &amp; Pause Tuning</text>
+    <text x="15" y="172" fill="#daf2e1" font-family="sans-serif" font-size="10.5">• Strip markdown &amp; dashes</text>
+    <text x="15" y="192" fill="#daf2e1" font-family="sans-serif" font-size="10.5">• +700ms dramatic silence</text>
+    <text x="15" y="212" fill="#6be7ff" font-family="monospace" font-size="9.5">✓ ONNX Ultra-fast TTS</text>
+  </g>
+
+  <!-- Arrow 3 -> 4 -->
+  <g transform="translate(712, 200)">
+    <line x1="0" y1="0" x2="16" y2="0" stroke="#c7ff7b" stroke-width="2.5"/>
+    <polygon points="16,-5 24,0 16,5" fill="#c7ff7b"/>
+  </g>
+
+  <!-- STEP 4 -->
+  <g transform="translate(740, 85)">
+    <rect width="185" height="250" rx="10" fill="url(#card-grad4)" stroke="#ffbd2e" stroke-width="1.5"/>
+    <rect width="185" height="34" rx="10" fill="#44351b"/>
+    <text x="12" y="22" fill="#ffbd2e" font-family="sans-serif" font-size="12" font-weight="bold">4. BGM &amp; MASTER</text>
+    
+    <text x="12" y="60" fill="#ff86c8" font-family="monospace" font-size="10" font-weight="bold">Pydub Audio Mastering</text>
+    <text x="12" y="82" fill="#f5eed2" font-family="sans-serif" font-size="10.5">• Random BGM pick</text>
+    <text x="12" y="102" fill="#f5eed2" font-family="sans-serif" font-size="10.5">• Auto-loop to speech</text>
+    <text x="12" y="122" fill="#f5eed2" font-family="sans-serif" font-size="10.5">• -19 dB Ducking</text>
+    <text x="12" y="142" fill="#f5eed2" font-family="sans-serif" font-size="10.5">• 4000ms Fade-out tail</text>
+    <text x="12" y="170" fill="#ffbd2e" font-family="monospace" font-size="10" font-weight="bold">Final Deliverables</text>
+    <text x="12" y="192" fill="#c7ff7b" font-family="sans-serif" font-size="10.5">• Master .WAV export</text>
+    <text x="12" y="212" fill="#6be7ff" font-family="monospace" font-size="9.5">✓ Final_Script.txt</text>
+  </g>
+
+  <!-- Bottom Technical Highlight Bar -->
+  <g transform="translate(35, 360)">
+    <rect width="890" height="120" rx="10" fill="#0f1224" stroke="#48336d" stroke-width="1.5"/>
+    <text x="25" y="32" fill="#6be7ff" font-family="monospace" font-size="12" font-weight="bold">⚡ CORE SYSTEM BENCHMARKS &amp; REPRODUCIBILITY</text>
+    <text x="25" y="58" fill="#d2d7f0" font-family="sans-serif" font-size="11">• Dual T4 GPU Execution: Efficient memory hand-off from Qwen2.5-7B (fp16) to Kokoro ONNX voice synthesizer with 0% VRAM memory leakage.</text>
+    <text x="25" y="80" fill="#d2d7f0" font-family="sans-serif" font-size="11">• Expressive Custom Voice Blend: 70% Indian Female (hf_alpha) + 30% Warm Emotional Female (af_heart) yielding natural cultural authenticity.</text>
+    <text x="25" y="102" fill="#d2d7f0" font-family="sans-serif" font-size="11">• Automated Studio Mastering: Dynamic audio overlay ducking BGM by -19dB ensures pristine speech clarity and broadcast-ready podcast quality.</text>
+  </g>
+</svg>

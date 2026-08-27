@@ -1,0 +1,9 @@
+# Amazon Multi-Stage Web Scraper & ETL Pipeline
+
+A resilient two-stage Python web scraper utilizing ScrapingAnt API proxies and BeautifulSoup to bypass Amazon anti-bot protections, extract paginated search catalog items, and perform deep secondary scraping for product specifications, ASIN, and manufacturer data serialized directly to CSV.
+
+Key Highlights:
+- Two-Tier Extraction: Traverses 20+ paginated search pages (ad items and organic listings) and performs secondary deep-crawling on individual product URLs.
+- Anti-Bot Bypass & Deduplication: Integrates ScrapingAntClient API proxies to circumvent rate-limits and header blocks, backed by in-memory URL deduplication.
+- Deep Attribute Normalization: Robust DOM parsing of detailed bullet lists (detail-bullet-list) and fallback key-value tables (prodDetTable) for ASIN, price, rating, reviews, and manufacturer tags.
+- Clean CSV Serialization: Cleans unicode artifacts (\u200e), strips anomalous linebreaks, and writes standardized 8-column records to products.csv.

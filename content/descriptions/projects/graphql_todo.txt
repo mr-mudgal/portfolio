@@ -1,0 +1,62 @@
+# Keycloak & GraphQL Enterprise Task Management SaaS
+
+A full-stack Python web application combining Flask, Graphene GraphQL API, Keycloak OpenID Connect (OIDC) authentication, MySQL database persistence, and Stripe Subscription billing.
+
+---
+
+## 🎯 Architecture & System Overview
+
+This application demonstrates enterprise-grade authentication, modern GraphQL query/mutation APIs, and SaaS subscription monetization built on a clean Python backend foundation.
+
+```
+┌─────────────────┐       ┌────────────────────┐       ┌──────────────────────┐
+│  Keycloak OIDC  │ ────> │  Flask Middleware  │ ────> │   Graphene GraphQL   │
+│ (Realm: myorg)  │ <──── │    (server.py)     │ <──── │ (graphql_coding.py)  │
+└─────────────────┘       └────────────────────┘       └──────────────────────┘
+                                    │                             │
+                                    ▼                             ▼
+                          ┌────────────────────┐       ┌──────────────────────┐
+                          │   Stripe Billing   │       │   MySQL Database     │
+                          │ (Subscription API) │       │   (To_Do Table)      │
+                          └────────────────────┘       └──────────────────────┘
+```
+
+---
+
+## 🔐 1. Keycloak IAM & OpenID Connect Authentication
+- **OIDC Identity Federation**: Configured via `client_secrets.json` connecting to Keycloak Realm `myorg` with client `test_api_client`.
+- **Route Guarding**: Enforced via `@oidc.require_login` decorator on private endpoints (`/user/list-all-To-Dos`, `/user/add-a-To-Do`, `/user/edit-a-To-Do/<title>`, `/user/delete-a-To-Do/<title>`).
+- **Session Token Lifecycle**: Manages token retrieval, introspection, userinfo JSON caching, and clean session logout with token revocation.
+
+---
+
+## 📊 2. Graphene GraphQL API Schema
+- **Object Types**: `ToDo(title, description, time, images)`
+- **GraphQL Queries**:
+  - `resolve_todos()`: Fetches all tasks isolated to the authenticated user's Keycloak `sub` ID.
+  - `resolve_todo(title)`: Retrieves specific task details by unique title identifier.
+- **GraphQL Mutations**:
+  - `CreateToDo(title, description, time, images)`: Inserts new task into MySQL with commit transactions.
+  - `UpdateToDo(title, description, time, images)`: Updates existing task properties with defensive null handling.
+  - `DeleteToDo(title)`: Safely removes tasks scoped to the authenticated user.
+
+---
+
+## 💳 3. Stripe Checkout & Pro Subscription Licensing
+- **Stripe API Integration**: Creates test-mode checkout sessions with recurring subscription plans (`price_1NZUDkSBIuEMkI6UXfQrMy1y`).
+- **Feature Gating**: Pro license status (`ispro()`) dynamically unlocks media attachment fields (`images`) across Add/Edit forms and the main dashboard.
+- **Webhook/Redirect Handling**: Smooth post-purchase redirection to `/thankyou` with automatic database license upgrades (`update_to_pro()`).
+
+---
+
+## 📦 4. Relational Database Persistence (MySQL)
+- **Database Engine**: MySQL relational backend with `mysql.connector`.
+- **Multi-Tenant User Isolation**: Every task query strictly joins on `userid = getuserinfo()["sub"]` ensuring complete data privacy between registered organization users.
+
+---
+
+## 🚀 Key Highlights & Capabilities
+- **Enterprise IAM Integration**: Production-ready Single Sign-On (SSO) with Keycloak OIDC authentication.
+- **Declarative GraphQL Layer**: Replaces rigid REST endpoints with flexible Graphene queries and mutations.
+- **Built-in SaaS Monetization**: Full end-to-end Stripe subscription workflow and gated Pro features.
+- **Defensive Error Handling**: Custom 404 page handlers and structured input validation.

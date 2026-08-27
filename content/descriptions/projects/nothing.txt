@@ -1,0 +1,19 @@
+# Nothing. Website Clone (V1)
+
+A pixel-perfect, interactive frontend replica of the iconic first iteration of the Nothing website, engineered with pure HTML5, CSS3, and Vanilla JavaScript.
+
+## Core Features & Aesthetics
+- **Dot-Matrix Typography**: Accurate replication of the brand's signature dotted red font and styling across navigation and hero headers.
+- **Interactive Dropdown Navigation**: Smooth, hover-triggered dropdown menus for primary navigation routes (Phone, Audio, Accessories).
+- **Responsive Accordion Footer**: Fully functional JavaScript-powered accordion organizing Products, Company, Support, and Social channels across mobile and desktop.
+- **Brutalist & High-Contrast Visuals**: Stark monochromatic palette highlighting the mechanical transparency and retro-futuristic aesthetic of Nothing's product lineup.
+- **Zero-Dependency Architecture**: Built entirely from scratch with vanilla web technologies for instant load performance and complete DOM control.
+
+## Technology Stack
+- **HTML5**: Semantic document layout, accessibility landmarks, and structured DOM elements.
+- **CSS3**: Dot-matrix typography rules, custom flex/grid systems, and smooth transition states.
+- **Vanilla JavaScript**: Lightweight event handling for navigation hover states and accordion expansion.
+
+## Steps to Run Locally
+1. Clone the repository: `git clone https://github.com/mr-mudgal/Nothing-website-replica.git`
+2. Open `index.html` directly in any modern web browser or launch with Live Server.

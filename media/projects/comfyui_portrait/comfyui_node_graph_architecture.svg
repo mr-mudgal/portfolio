@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 560" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGradComfy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e1329" />
+      <stop offset="50%" stop-color="#070917" />
+      <stop offset="100%" stop-color="#02030a" />
+    </linearGradient>
+    <linearGradient id="cardGradComfy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#182042" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0d1126" stop-opacity="0.95" />
+    </linearGradient>
+  </defs>
+
+  <!-- Frame Background -->
+  <rect width="940" height="560" rx="16" fill="url(#bgGradComfy)" stroke="#27386d" stroke-width="1.5" />
+
+  <!-- Top Window Header Bar -->
+  <rect width="940" height="46" rx="16" fill="#121833" />
+  <rect y="30" width="940" height="16" fill="#121833" />
+  <line x1="0" y1="46" x2="940" y2="46" stroke="#1d2752" stroke-width="1" />
+
+  <circle cx="26" cy="23" r="6" fill="#ff5f56" />
+  <circle cx="46" cy="23" r="6" fill="#ffbd2e" />
+  <circle cx="66" cy="23" r="6" fill="#27c93f" />
+
+  <text x="470" y="28" fill="#8fb0ff" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="600" text-anchor="middle">
+    ComfyUI Node Graph Architecture — SDXL Juggernaut v9 · YOLOv8 FaceDetailer · IP-Adapter FaceID · 4x-UltraSharp
+  </text>
+
+  <!-- Top Pipeline Header Banner -->
+  <g transform="translate(40, 68)">
+    <rect x="0" y="0" width="860" height="58" rx="12" fill="#161f42" stroke="#4fe0ff" stroke-width="1.5" stroke-dasharray="6,4" />
+    <text x="25" y="35" fill="#4fe0ff" font-family="'JetBrains Mono', monospace" font-size="15" font-weight="700">COMFYUI PRODUCTION NODE ENGINE</text>
+    <text x="330" y="35" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="13">
+      — YOLOv8m Inpainting · IP-Adapter FaceID Identity Lock · Ultimate SD Tiled Upscale (4K)
+    </text>
+    <rect x="740" y="15" width="95" height="28" rx="6" fill="#0a2a44" stroke="#4fe0ff" stroke-width="1" />
+    <text x="787" y="33" fill="#4fe0ff" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" text-anchor="middle">SDXL + LoRA</text>
+  </g>
+
+  <!-- Stage 1: SDXL Base Generation -->
+  <g transform="translate(40, 150)">
+    <rect width="195" height="245" rx="12" fill="url(#cardGradComfy)" stroke="#2b407a" stroke-width="1.2" />
+    <rect x="14" y="14" width="34" height="34" rx="8" fill="#192850" />
+    <text x="31" y="36" fill="#4fe0ff" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle">🧠</text>
+    
+    <text x="56" y="28" fill="#8fb0ff" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">NODE GROUP 1</text>
+    <text x="56" y="44" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="700">SDXL Base</text>
+    
+    <line x1="14" y1="58" x2="181" y2="58" stroke="#1d2d58" stroke-width="1" />
+    <text x="14" y="80" fill="#a8b8db" font-family="system-ui, sans-serif" font-size="11">
+      <tspan x="14" dy="0">• JuggernautXL_v9.safetensors</tspan>
+      <tspan x="14" dy="18">• EmptyLatentImage: 832x1216</tspan>
+      <tspan x="14" dy="18">• CLIPTextEncode (Positive 1.3)</tspan>
+      <tspan x="14" dy="18">• DPM++ 2M SDE Karras</tspan>
+      <tspan x="14" dy="18">• Steps: 35 | CFG: 4.5</tspan>
+      <tspan x="14" dy="18">• VAEDecode -> Image Latent</tspan>
+    </text>
+    
+    <rect x="14" y="200" width="167" height="30" rx="6" fill="#0c1833" />
+    <text x="97" y="219" fill="#4fe0ff" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" text-anchor="middle">Base Diffusion Pass</text>
+  </g>
+
+  <!-- Stage 2: YOLOv8 FaceDetailer Inpainting -->
+  <g transform="translate(260, 150)">
+    <rect width="195" height="245" rx="12" fill="url(#cardGradComfy)" stroke="#ff86c8" stroke-width="1.5" />
+    <rect x="14" y="14" width="34" height="34" rx="8" fill="#3c1538" />
+    <text x="31" y="36" fill="#ff86c8" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle">🎯</text>
+    
+    <text x="56" y="28" fill="#ff86c8" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">NODE GROUP 2 · YOLO</text>
+    <text x="56" y="44" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="700">FaceDetailer</text>
+    
+    <line x1="14" y1="58" x2="181" y2="58" stroke="#481844" stroke-width="1" />
+    <text x="14" y="80" fill="#a8b8db" font-family="system-ui, sans-serif" font-size="11">
+      <tspan x="14" dy="0">• Ultralytics face_yolov8m.pt</tspan>
+      <tspan x="14" dy="18">• Guide Size: 512 | Max: 1024</tspan>
+      <tspan x="14" dy="18">• Denoise: 0.24 | Feather: 5</tspan>
+      <tspan x="14" dy="18">• BBox Dilation: 10 (Crop: 3.0)</tspan>
+      <tspan x="14" dy="18">• Noise mask force_inpaint</tspan>
+      <tspan x="14" dy="18">• Restores eyes, pores, iris</tspan>
+    </text>
+    
+    <rect x="14" y="200" width="167" height="30" rx="6" fill="#250b23" stroke="#ff86c8" stroke-width="1" />
+    <text x="97" y="219" fill="#ff86c8" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" text-anchor="middle">YOLO Facial Inpainting</text>
+  </g>
+
+  <!-- Stage 3: IP-Adapter FaceID Identity Lock -->
+  <g transform="translate(480, 150)">
+    <rect width="205" height="245" rx="12" fill="url(#cardGradComfy)" stroke="#b477ff" stroke-width="1.2" />
+    <rect x="14" y="14" width="34" height="34" rx="8" fill="#2d174d" />
+    <text x="31" y="36" fill="#b477ff" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle">🔒</text>
+    
+    <text x="56" y="28" fill="#b477ff" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">NODE GROUP 3 · FACEID</text>
+    <text x="56" y="44" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="700">IP-Adapter FaceID</text>
+    
+    <line x1="14" y1="58" x2="191" y2="58" stroke="#371b5e" stroke-width="1" />
+    <text x="14" y="80" fill="#a8b8db" font-family="system-ui, sans-serif" font-size="11">
+      <tspan x="14" dy="0">• IPAdapterInsightFaceLoader</tspan>
+      <tspan x="14" dy="18">• 512D Landmark extraction</tspan>
+      <tspan x="14" dy="18">• Cross-Attention Weight: 1.05</tspan>
+      <tspan x="14" dy="18">• Linear scaling · Concat mode</tspan>
+      <tspan x="14" dy="18">• V-only attention modulation</tspan>
+      <tspan x="14" dy="18">• Zero-shot identity transfer</tspan>
+    </text>
+    
+    <rect x="14" y="200" width="177" height="30" rx="6" fill="#1b0c30" />
+    <text x="102" y="219" fill="#b477ff" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" text-anchor="middle">InsightFace Identity Lock</text>
+  </g>
+
+  <!-- Stage 4: Ultimate SD Upscale (4x-UltraSharp) -->
+  <g transform="translate(705, 150)">
+    <rect width="195" height="245" rx="12" fill="url(#cardGradComfy)" stroke="#c7ff7b" stroke-width="1.2" />
+    <rect x="14" y="14" width="34" height="34" rx="8" fill="#1c3319" />
+    <text x="31" y="36" fill="#c7ff7b" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle">✨</text>
+    
+    <text x="56" y="28" fill="#c7ff7b" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">NODE GROUP 4 · UPSCALE</text>
+    <text x="56" y="44" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="700">UltimateSDUpscale</text>
+    
+    <line x1="14" y1="58" x2="181" y2="58" stroke="#254722" stroke-width="1" />
+    <text x="14" y="80" fill="#a8b8db" font-family="system-ui, sans-serif" font-size="11">
+      <tspan x="14" dy="0">• 4x-UltraSharp.pth model</tspan>
+      <tspan x="14" dy="18">• Touch_of_Realism LoRA (0.8)</tspan>
+      <tspan x="14" dy="18">• Upscale Factor: 2x (4K/8K)</tspan>
+      <tspan x="14" dy="18">• 512x512 Tiled diffusion</tspan>
+      <tspan x="14" dy="18">• Seam Fix Padding: 16px</tspan>
+      <tspan x="14" dy="18">• SaveImageAdvanced (16-bit)</tspan>
+    </text>
+    
+    <rect x="14" y="200" width="167" height="30" rx="6" fill="#0d2410" />
+    <text x="97" y="219" fill="#c7ff7b" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" text-anchor="middle">4K Tiled Super-Res</text>
+  </g>
+
+  <!-- Flow connecting arrows -->
+  <path d="M 237 270 L 257 270" stroke="#4fe0ff" stroke-width="2" />
+  <path d="M 457 270 L 477 270" stroke="#4fe0ff" stroke-width="2" />
+  <path d="M 687 270 L 703 270" stroke="#4fe0ff" stroke-width="2" />
+
+  <!-- Bottom Metric Badges -->
+  <g transform="translate(40, 415)">
+    <rect width="860" height="110" rx="12" fill="#0f152d" stroke="#1f2c58" stroke-width="1" />
+
+    <g transform="translate(25, 20)">
+      <text x="0" y="20" fill="#8fb0ff" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">BASE SYNTHESIS</text>
+      <text x="0" y="52" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="20" font-weight="800">JuggernautXL v9</text>
+      <text x="0" y="72" fill="#4fe0ff" font-family="system-ui, sans-serif" font-size="11.5">DPM++ 2M SDE · 85mm f/1.8 Bokeh</text>
+    </g>
+
+    <g transform="translate(255, 20)">
+      <text x="0" y="20" fill="#8fb0ff" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">INPAINTING PRECISION</text>
+      <text x="0" y="52" fill="#ff86c8" font-family="'JetBrains Mono', monospace" font-size="20" font-weight="800">YOLOv8m Face</text>
+      <text x="0" y="72" fill="#ff86c8" font-family="system-ui, sans-serif" font-size="11.5">FaceDetailer 0.24 Denoise Refine</text>
+    </g>
+
+    <g transform="translate(500, 20)">
+      <text x="0" y="20" fill="#8fb0ff" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">ZERO-SHOT IDENTITY</text>
+      <text x="0" y="52" fill="#b477ff" font-family="'JetBrains Mono', monospace" font-size="20" font-weight="800">IP-Adapter FaceID</text>
+      <text x="0" y="72" fill="#b477ff" font-family="system-ui, sans-serif" font-size="11.5">InsightFace 512D Embedding Lock</text>
+    </g>
+
+    <g transform="translate(710, 20)">
+      <text x="0" y="20" fill="#8fb0ff" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">OUTPUT RESOLUTION</text>
+      <text x="0" y="52" fill="#c7ff7b" font-family="'JetBrains Mono', monospace" font-size="20" font-weight="800">4K / 8K Super-Res</text>
+      <text x="0" y="72" fill="#c7ff7b" font-family="system-ui, sans-serif" font-size="11.5">4x-UltraSharp · 16-Bit sRGB PNG</text>
+    </g>
+  </g>
+</svg>

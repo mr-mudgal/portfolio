@@ -1,0 +1,25 @@
+# Bluejay Delivery — Employee Timecard Analysis & Compliance Engine
+
+An algorithmic Python data processing and workforce compliance engine developed for Bluejay Delivery to parse complex multi-cycle employee shift records and detect labor compliance edge cases.
+
+## Core Problem & Compliance Directives
+The engine iterates over large-scale timecard datasets to audit three critical labor compliance criteria:
+1. **Consecutive Days Audit**: Identifies employees working across 7 consecutive calendar days.
+2. **Rest Period Gap Analysis**: Flags non-compliant shift turnarounds where rest time between shifts is less than 10 hours but greater than 1 hour.
+3. **Single-Shift Overtime Threshold**: Catches severe shift duration violations exceeding 14 continuous hours.
+
+## Technical Architecture & Implementation
+- **Chronological Sorting & Windowing**: Implements sliding window algorithms across parsed `Time` and `Time Out` timestamps grouped by `Employee Name` and `Position ID`.
+- **Date/Time Delta Arithmetic**: High-precision `datetime` parsing handling overnight shifts, irregular split shifts, and multi-day continuous work intervals.
+- **Interactive CLI & Batch Audit**: Menu-driven terminal interface enabling targeted compliance filtering or automated report exports.
+
+## Technology Stack
+- **Language**: Python 3.x
+- **Data Ingestion & Parsing**: Pandas, OpenPyXL / CSV Engine, `datetime` module
+- **Algorithms**: Sliding window chronological grouping, time delta compliance filters
+
+## Steps to Run Locally
+1. Clone the repository: `git clone https://github.com/mr-mudgal/Time-Card.git`
+2. Open terminal in project root.
+3. Execute the CLI engine: `python3 main.py`
+4. Choose options 1, 2, or 3 from the interactive menu to run compliance checks, or Q to exit.

@@ -1,0 +1,29 @@
+# Containerized Django User Registration & Auth Service
+
+A production-ready, containerized Python Django authentication and user management service featuring Docker Compose orchestration, comprehensive unit testing, server-side form validation, and relational database persistence.
+
+## Core Architecture & Engineering Highlights
+- **Docker & Docker Compose Orchestration**: Fully containerized environment with custom `Dockerfile` and `docker-compose.yml` for unified local setup and isolated production deployment.
+- **Modular App Architecture (`userRegistration`)**: Encapsulated Django application containing clean separation of concerns across `forms.py`, `models.py`, `urls.py`, `views.py`, and server-rendered HTML templates.
+- **Automated Unit Test Suite**: Dedicated test coverage structured in `tests/` verifying URL route resolution, form validation edge-cases, and database write operations.
+- **Defensive Form Validation**: Server-side error handling catching duplicate usernames, invalid inputs, and rendering contextual inline validation alerts.
+
+## Technology Stack
+- **Backend Framework**: Python 3.x, Django Framework (MTV Architecture, Forms, ORM)
+- **Containerization & DevOps**: Docker, Docker Compose
+- **Testing & Quality Assurance**: Django Unit Testing (`tests/`)
+- **Database**: SQLite / Relational Database
+
+## Steps to Run Locally
+
+### Option 1: Running with Docker (Recommended)
+1. Ensure Docker and Docker Compose are running on your system.
+2. Open terminal in the root directory:
+   - `docker-compose up` (or `docker-compose build && docker-compose up`)
+3. Open browser and visit: `http://localhost:8000`
+
+### Option 2: Running without Docker
+1. Install Python dependencies: `pip install -r requirements.txt`
+2. Run database migrations: `python manage.py migrate`
+3. Execute unit tests: `python manage.py test`
+4. Start Django server: `python manage.py runserver` (Access via `http://localhost:8000`)

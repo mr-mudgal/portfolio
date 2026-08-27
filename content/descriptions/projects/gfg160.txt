@@ -1,0 +1,18 @@
+# GeeksforGeeks 160-Day Algorithmic DSA Challenge
+
+A comprehensive, production-grade Python problem-solving suite covering all 160 problems from the official GeeksforGeeks 160 Days DSA Challenge.
+
+## Algorithmic Paradigms & Covered Domains
+- **Arrays & Dynamic Programming**: Kadane's Algorithm, Circular Subarrays, Maximum Product Subarrays, Missing Positive Number, Inversion Counting.
+- **String Manipulation & Pattern Searching**: KMP Pattern Search, Anagram Verification, ATOI string-to-integer conversion, Palindromic Prefix Insertion.
+- **Binary Search & Allocation Strategy**: Search on Answer Space (Aggressive Cows, Minimum Pages Allocation), Rotated Array Searching, Peak Elements.
+- **Intervals & Matrix Operations**: Overlapping Interval Merging, In-Place 90° Matrix Rotation, Spiral Traversals, Constant-Space Matrix Zeroing.
+- **Advanced Graph & Tree Structures**: Shortest Paths, Disjoint Set Union (DSU), Binary Search Trees, Tries, and Bit Manipulation.
+
+## Engineering Highlights
+- **Optimal Time & Space Constraints**: Every solution achieves theoretical optimal complexities (O(N), O(N log N), O(log N), and in-place O(1) auxiliary memory).
+- **Pythonic Idioms & Edge-Case Resilience**: Clean, defensive code handling boundary limits, empty inputs, duplicate elements, and integer overflow constraints.
+
+## Repository & Problem Access
+- **GitHub Repository**: [https://github.com/mr-mudgal/GfG-160-Days](https://github.com/mr-mudgal/GfG-160-Days)
+- **Challenge Curriculum**: [GeeksforGeeks 160 Series](https://www.geeksforgeeks.org/courses/gfg-160-series)

@@ -1,0 +1,10 @@
+# Template for New Project Description
+# You can write multiple paragraphs here. This text will be dynamically loaded and displayed in the project modal.
+
+Overview:
+Write a detailed overview of your project, technologies used, architecture, and real-world results here.
+
+Key Engineering Highlights:
+- Bullet point 1: Explain the key technical challenge solved.
+- Bullet point 2: Describe the backend architecture or LLM/vision model pipeline.
+- Bullet point 3: Mention performance metrics or automation gains.

@@ -1,0 +1,30 @@
+# Full Stack MERN Book Management System
+
+A modern, responsive full-stack MERN (MongoDB, Express, React, Node.js) web application for book catalog lifecycle management featuring real-time debounced search, dynamic data grid operations with sorting/filtering/export, defensive confirmation dialogs, and top-centered toast notifications.
+
+## Key Pages & Architecture
+- **Home**: General overview of the platform, highlighting core features, usage guides, and responsive card layouts.
+- **Read All Books**: Data grid table featuring multi-column sorting, custom filtering, density adjustment, pagination, and one-click data table export.
+- **Create New Book**: Intuitive book creation form with field-level validation and form reset capabilities.
+
+## Engineering Highlights
+- **Real-Time Live Search**: Real-time debounced search indexing catalog records with instant autocomplete suggestions across desktop and mobile viewports.
+- **Defensive Confirmation Dialogs**: Confirmation modals guarding state-altering actions (creation, editing, deletion, form resets) to prevent accidental data loss.
+- **Automated Toast Notifications**: Top-centered feedback toasts for immediate asynchronous status updates.
+- **Modern Responsive UI**: Translucent frosted navigation bar, custom rounded containers, and mobile drawer navigation with high-contrast design tokens.
+
+## Technology Stack
+- **Database**: MongoDB (Mongoose schemas for structured book document persistence)
+- **Frontend**: React.js (Component-based architecture, hooks, responsive styling)
+- **Backend**: Node.js & Express.js (RESTful API endpoints on port 8080)
+
+## Steps to Run Locally
+1. Clone repository: `git clone https://github.com/mr-mudgal/BookManagementSystem.git`
+2. Start Backend:
+   - `cd BMS-backend`
+   - Run `npm i` and configure `.env` with database credentials.
+   - Run `npm start` (Backend runs on `http://localhost:8080`).
+3. Start Frontend:
+   - `cd ../bms-frontend`
+   - Run `npm i` and create `.env` with `REACT_APP_API_URL`.
+   - Run `npm start` (Automatically launches browser).

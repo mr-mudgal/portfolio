@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 560" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGradAmazon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#081816" />
+      <stop offset="50%" stop-color="#040e0d" />
+      <stop offset="100%" stop-color="#020606" />
+    </linearGradient>
+    <linearGradient id="cardGradAmazon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f2b28" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#071715" stop-opacity="0.95" />
+    </linearGradient>
+  </defs>
+
+  <rect width="940" height="560" rx="16" fill="url(#bgGradAmazon)" stroke="#1a4d47" stroke-width="1.5" />
+
+  <rect width="940" height="46" rx="16" fill="#0d2421" />
+  <rect y="30" width="940" height="16" fill="#0d2421" />
+  <line x1="0" y1="46" x2="940" y2="46" stroke="#163b36" stroke-width="1" />
+
+  <circle cx="26" cy="23" r="6" fill="#ff5f56" />
+  <circle cx="46" cy="23" r="6" fill="#ffbd2e" />
+  <circle cx="66" cy="23" r="6" fill="#27c93f" />
+
+  <text x="470" y="28" fill="#88ded4" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="600" text-anchor="middle">
+    Amazon Multi-Stage Web Scraper &amp; Automated ETL Catalog Pipeline Architecture
+  </text>
+
+  <g transform="translate(40, 68)">
+    <rect x="0" y="0" width="860" height="58" rx="12" fill="#0b2421" stroke="#4fe0ff" stroke-width="1.5" stroke-dasharray="6,4" />
+    <text x="25" y="35" fill="#4fe0ff" font-family="'JetBrains Mono', monospace" font-size="15" font-weight="700">MULTI-STAGE ETL PIPELINE</text>
+    <text x="270" y="35" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="13">
+      — Rotating Proxy Mesh · Anti-Bot Circumvention · BeautifulSoup4 Parsing · Schema Normalization
+    </text>
+    <rect x="740" y="15" width="95" height="28" rx="6" fill="#061c1a" stroke="#4fe0ff" stroke-width="1" />
+    <text x="787" y="33" fill="#4fe0ff" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" text-anchor="middle">RESILIENT</text>
+  </g>
+
+  <!-- Stage 1 -->
+  <g transform="translate(40, 150)">
+    <rect width="195" height="245" rx="12" fill="url(#cardGradAmazon)" stroke="#1a4d47" stroke-width="1.2" />
+    <rect x="14" y="14" width="34" height="34" rx="8" fill="#133833" />
+    <text x="31" y="36" fill="#ffd166" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle">🛡️</text>
+    
+    <text x="56" y="28" fill="#78b5ad" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">STAGE 1</text>
+    <text x="56" y="44" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Anti-Bot Evasion</text>
+    
+    <line x1="14" y1="58" x2="181" y2="58" stroke="#163b36" stroke-width="1" />
+    <text x="14" y="80" fill="#a4ccc6" font-family="system-ui, sans-serif" font-size="11">
+      <tspan x="14" dy="0">• Dynamic User-Agent Pool</tspan>
+      <tspan x="14" dy="18">• Rotating Proxy Gateway</tspan>
+      <tspan x="14" dy="18">• Randomized Sleep Delays</tspan>
+      <tspan x="14" dy="18">• Request header spoofing</tspan>
+      <tspan x="14" dy="18">• Captcha avoid heuristics</tspan>
+    </text>
+    
+    <rect x="14" y="200" width="167" height="30" rx="6" fill="#041210" />
+    <text x="97" y="219" fill="#ffd166" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" text-anchor="middle">Evasion Shield</text>
+  </g>
+
+  <!-- Stage 2 -->
+  <g transform="translate(260, 150)">
+    <rect width="195" height="245" rx="12" fill="url(#cardGradAmazon)" stroke="#1a4d47" stroke-width="1.2" />
+    <rect x="14" y="14" width="34" height="34" rx="8" fill="#133833" />
+    <text x="31" y="36" fill="#4fe0ff" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle">🔍</text>
+    
+    <text x="56" y="28" fill="#78b5ad" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">STAGE 2</text>
+    <text x="56" y="44" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="700">DOM Parsing</text>
+    
+    <line x1="14" y1="58" x2="181" y2="58" stroke="#163b36" stroke-width="1" />
+    <text x="14" y="80" fill="#a4ccc6" font-family="system-ui, sans-serif" font-size="11">
+      <tspan x="14" dy="0">• BeautifulSoup4 selectors</tspan>
+      <tspan x="14" dy="18">• Product Title extraction</tspan>
+      <tspan x="14" dy="18">• ASIN &amp; Price regex</tspan>
+      <tspan x="14" dy="18">• Review rating scores</tspan>
+      <tspan x="14" dy="18">• Prime status &amp; stock flags</tspan>
+    </text>
+    
+    <rect x="14" y="200" width="167" height="30" rx="6" fill="#041210" />
+    <text x="97" y="219" fill="#4fe0ff" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" text-anchor="middle">HTML Extraction</text>
+  </g>
+
+  <!-- Stage 3 -->
+  <g transform="translate(480, 150)">
+    <rect width="205" height="245" rx="12" fill="url(#cardGradAmazon)" stroke="#c7ff7b" stroke-width="1.5" />
+    <rect x="14" y="14" width="34" height="34" rx="8" fill="#183617" />
+    <text x="31" y="36" fill="#c7ff7b" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle">⚙️</text>
+    
+    <text x="56" y="28" fill="#c7ff7b" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">STAGE 3 · ETL</text>
+    <text x="56" y="44" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Data Normalization</text>
+    
+    <line x1="14" y1="58" x2="191" y2="58" stroke="#1d451b" stroke-width="1" />
+    <text x="14" y="80" fill="#a4ccc6" font-family="system-ui, sans-serif" font-size="11">
+      <tspan x="14" dy="0">• Currency string cleansing</tspan>
+      <tspan x="14" dy="18">• Null field remediation</tspan>
+      <tspan x="14" dy="18">• Categorical encoding</tspan>
+      <tspan x="14" dy="18">• Duplicate ASIN deduplication</tspan>
+      <tspan x="14" dy="18">• Decimal price standardizer</tspan>
+    </text>
+    
+    <rect x="14" y="200" width="177" height="30" rx="6" fill="#081c07" stroke="#27c93f" stroke-width="1" />
+    <text x="102" y="219" fill="#c7ff7b" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" text-anchor="middle">Clean Schema Stream</text>
+  </g>
+
+  <!-- Stage 4 -->
+  <g transform="translate(705, 150)">
+    <rect width="195" height="245" rx="12" fill="url(#cardGradAmazon)" stroke="#1a4d47" stroke-width="1.2" />
+    <rect x="14" y="14" width="34" height="34" rx="8" fill="#133833" />
+    <text x="31" y="36" fill="#ff86c8" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle">📦</text>
+    
+    <text x="56" y="28" fill="#78b5ad" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">STAGE 4</text>
+    <text x="56" y="44" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Persistence Sink</text>
+    
+    <line x1="14" y1="58" x2="181" y2="58" stroke="#163b36" stroke-width="1" />
+    <text x="14" y="80" fill="#a4ccc6" font-family="system-ui, sans-serif" font-size="11">
+      <tspan x="14" dy="0">• Normalized CSV output</tspan>
+      <tspan x="14" dy="18">• JSON document warehouse</tspan>
+      <tspan x="14" dy="18">• PostgreSQL staging table</tspan>
+      <tspan x="14" dy="18">• Execution telemetry log</tspan>
+      <tspan x="14" dy="18">• Auto-archive pipeline</tspan>
+    </text>
+    
+    <rect x="14" y="200" width="167" height="30" rx="6" fill="#041210" />
+    <text x="97" y="219" fill="#ff86c8" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" text-anchor="middle">CSV &amp; SQL Database</text>
+  </g>
+
+  <path d="M 237 270 L 257 270" stroke="#4fe0ff" stroke-width="2" />
+  <path d="M 457 270 L 477 270" stroke="#4fe0ff" stroke-width="2" />
+  <path d="M 687 270 L 703 270" stroke="#4fe0ff" stroke-width="2" />
+
+  <g transform="translate(40, 415)">
+    <rect width="860" height="110" rx="12" fill="#071715" stroke="#143d38" stroke-width="1" />
+
+    <g transform="translate(25, 20)">
+      <text x="0" y="20" fill="#78b5ad" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">PARSING ENGINE</text>
+      <text x="0" y="52" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="20" font-weight="800">BeautifulSoup4</text>
+      <text x="0" y="72" fill="#4fe0ff" font-family="system-ui, sans-serif" font-size="11.5">Fast lxml tree traversal</text>
+    </g>
+
+    <g transform="translate(255, 20)">
+      <text x="0" y="20" fill="#78b5ad" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">ANTI-BOT DEFENSE</text>
+      <text x="0" y="52" fill="#ffd166" font-family="'JetBrains Mono', monospace" font-size="20" font-weight="800">Proxy &amp; User-Agent</text>
+      <text x="0" y="72" fill="#ffd166" font-family="system-ui, sans-serif" font-size="11.5">Automated evasion rotation</text>
+    </g>
+
+    <g transform="translate(500, 20)">
+      <text x="0" y="20" fill="#78b5ad" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">SCHEMA INTEGRITY</text>
+      <text x="0" y="52" fill="#c7ff7b" font-family="'JetBrains Mono', monospace" font-size="20" font-weight="800">100% Normalized</text>
+      <text x="0" y="72" fill="#c7ff7b" font-family="system-ui, sans-serif" font-size="11.5">Deduplicated ASIN records</text>
+    </g>
+
+    <g transform="translate(710, 20)">
+      <text x="0" y="20" fill="#78b5ad" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">STORAGE FORMATS</text>
+      <text x="0" y="52" fill="#ff86c8" font-family="'JetBrains Mono', monospace" font-size="20" font-weight="800">CSV · JSON · SQL</text>
+      <text x="0" y="72" fill="#ff86c8" font-family="system-ui, sans-serif" font-size="11.5">Data warehouse ready</text>
+    </g>
+  </g>
+</svg>

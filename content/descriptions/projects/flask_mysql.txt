@@ -1,0 +1,32 @@
+# Flask & MySQL Relational CRUD Application
+
+A lightweight, high-performance Python Flask web service integrated with a MySQL relational database for structured user lifecycle management, parameter-based route querying, and automated database schema seeding.
+
+## Core Features & Architecture
+- **Relational Schema Seeder (`db_create.py`)**: Automated script provisioning the `users` database schema (with `id`, `name`, `email`, `role` constraints) and populating initial seed records.
+- **RESTful Route Dispatching**: Modular routing structure across `/hello`, `/users`, `/users/<id>`, and `/new_user` handling CRUD operations with parameter validation.
+- **Server-Side Rendered HTML Views**: Dynamic rendering of user datasets in structured HTML tables and input forms.
+- **Defensive Error Handling**: Custom 404 handler with fallback navigation and descriptive database error notifications.
+
+## Technology Stack
+- **Backend Framework**: Python 3.x, Flask
+- **Database Engine**: MySQL Relational Database
+- **Database Connector**: `mysql-connector-python` / PyMySQL
+- **Frontend**: Server-rendered HTML5 templates
+
+## Steps to Run Locally
+
+### 1. Database Setup
+1. Ensure MySQL server is installed and running on your local machine.
+2. In `routers/routes.py` (line 8), update MySQL connection credentials:
+   - `host='YOUR_HOST'`, `user='YOUR_USER'`, `password='YOUR_PASSWORD'`
+3. Run database seeder: `python3 db_create.py` (Creates database, tables, and inserts 10 sample records).
+
+### 2. Launch Application
+1. Install dependencies: `pip install -r requirements.txt`
+2. Start Flask server: `python3 app.py` (or `flask run`)
+3. Access endpoints in browser:
+   - Home: `http://127.0.0.1:5000/hello`
+   - All Users Table: `http://127.0.0.1:5000/users`
+   - Single User Lookup: `http://127.0.0.1:5000/users/<id>`
+   - Create New User Form: `http://127.0.0.1:5000/new_user`
