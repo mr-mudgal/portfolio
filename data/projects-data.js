@@ -15,7 +15,48 @@ window.PORTFOLIO_PROJECTS = {
   // 1. AI / ML & GENERATIVE AI SYSTEMS (HIGH PRIORITY)
   // =========================================================================
 
-  // 1.1 Audio Storytelling Studio (Featured / Wide Rectangular)
+  // 1.1 Privacy-First Multi-Model LLM Terminal (Featured / Wide Rectangular)
+  llm_chatbot: {
+    id: "llm_chatbot",
+    title: "Privacy-Preserving Multi-Model LLM Terminal",
+    meta: "2024 · Presidio PII Anonymization · Ollama · Django REST · React 18 · SSE Streaming",
+    category: "ai",
+    featured: true,
+    wide: true,
+    tags: ["Python 3.11", "Django REST", "Ollama", "Presidio PII Anonymizer", "React 18", "SSE Streaming", "Tailwind CSS", "Local AI"],
+    github: "https://github.com/mr-mudgal/LLM_ChatBot",
+    liveUrl: "",
+    descriptionFile: "content/descriptions/projects/llm_chatbot.txt",
+    description: "A production-grade, privacy-first conversational AI terminal integrating Microsoft Presidio to detect and redact Personally Identifiable Information (PII) before routing prompts to local multi-model LLMs (Ollama / Llama 3.2), serving real-time Server-Sent Events (SSE) token streams to a modern React + Tailwind frontend with persistent chat window sessions.",
+    highlights: [
+      "Automated PII Sanitization: Employs Microsoft Presidio AnalyzerEngine and AnonymizerEngine to automatically detect, mask, and redact sensitive personal identifiers (names, emails, phones, locations) before LLM ingestion.",
+      "Dynamic Multi-Model Local Inference: Programmatically inspects local Ollama engine instances via terminal subprocesses, enabling real-time runtime model switching (Llama 3.2, DeepSeek, etc.) with zero cloud data transmission.",
+      "Real-Time SSE Token Streaming: Leverages Django StreamingHttpResponse and Server-Sent Events (SSE) chunks for low-latency, character-by-character response delivery matching commercial LLM interfaces.",
+      "Session Context & History Persistence: Architected relational Django ORM schemas with UUID-tagged chat windows (ChatWindow & ChatHistory), multi-turn context retention, and user profile preferences.",
+      "Modern Responsive Terminal Frontend: Designed a sleek, keyboard-navigable React 18 + Tailwind CSS interface featuring dark/light/system theme toggles, Lucide icons, and code markdown formatting."
+    ],
+    roadmap: [
+      { phase: "Phase 1: Local RAG Pipeline", desc: "Vectorize uploaded enterprise documents using ChromaDB / FAISS for semantic context retrieval." },
+      { phase: "Phase 2: Multimodal File & OCR Ingestion", desc: "Integrate SuryaOCR / Tesseract to enable automated text extraction from scanned PDFs and images." },
+      { phase: "Phase 3: Agentic Tool Calling & Function Execution", desc: "Equip models with Python code execution and web search capabilities using local sandbox containers." }
+    ],
+    media: [
+      {
+        type: "image",
+        file: "media/projects/llm_chatbot/architecture_pipeline.svg",
+        title: "System Architecture & Processing Pipeline",
+        caption: "End-to-end flow: React 18 UI ➔ Django REST API ➔ Microsoft Presidio PII Masking ➔ Ollama Local LLMs (Llama 3.2) ➔ SSE Token Streaming."
+      },
+      {
+        type: "image",
+        file: "media/projects/llm_chatbot/privacy_presidio_pipeline.svg",
+        title: "Presidio PII Sanitization & Inference Lifecycle",
+        caption: "Raw sensitive prompt redaction: Names, Emails, and Phone Numbers sanitized into contextual tokens before passing to local models."
+      }
+    ]
+  },
+
+  // 1.2 Audio Storytelling Studio (Featured / Wide Rectangular)
   audio_story: {
     id: "audio_story",
     title: "Cinematic AI Podcast & Cultural Narrative Studio",
@@ -25,7 +66,10 @@ window.PORTFOLIO_PROJECTS = {
     wide: true,
     tags: ["PyTorch", "Qwen-2.5 (7B-Instruct)", "Kokoro ONNX TTS", "Voice Blending (70/30)", "AudioSegment Ducking", "Transformers", "Pydub Mastering", "Python 3.11"],
     github: "https://github.com/mr-mudgal",
-    liveUrl: "",
+    liveUrl: "https://linktr.ee/thenarrativenetwork",
+    liveUrlText: "Spotify Podcast ↗",
+    liveButtonText: "Listen on Spotify",
+    liveBadgeText: "Spotify Podcast",
     descriptionFile: "content/descriptions/projects/audio_story.txt",
     description: "An automated storytelling and cinematic podcast production engine that converts raw markdown narratives into high-retention audio scripts using Qwen2.5-7B, synthesizes expressive neural speech via a custom blended Kokoro ONNX model (70% Indian Female + 30% Warm Emotional Female), and masters the final multi-track mix with automated BGM ducking (-19dB), 700ms dramatic pauses, and smooth outro fades.",
     highlights: [
@@ -164,7 +208,7 @@ window.PORTFOLIO_PROJECTS = {
     featured: false,
     wide: false,
     tags: ["Python 3.13", "Ollama", "DeepSeek-R1:8b", "Freedium Bypass", "Local AI", "ETL Pipeline", "Privacy-First"],
-    github: "https://github.com/mr-mudgal",
+    github: "https://github.com/mr-mudgal/medium_premium_scrapper",
     liveUrl: "",
     descriptionFile: "content/descriptions/projects/summarizer.txt",
     description: "An automated end-to-end local AI summarization pipeline that digests daily Medium blog newsletters, bypasses paywalls via Freedium, and generates structured executive briefs offline using DeepSeek-R1:8b via Ollama with 100% data privacy.",

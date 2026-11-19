@@ -1,0 +1,159 @@
+<svg viewBox="0 0 960 520" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080c16"/>
+      <stop offset="100%" stop-color="#0d1424"/>
+    </linearGradient>
+    <linearGradient id="card-grad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#14213d"/>
+      <stop offset="100%" stop-color="#0a1122"/>
+    </linearGradient>
+    <linearGradient id="card-grad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#0e1028"/>
+    </linearGradient>
+    <linearGradient id="card-grad3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#11322b"/>
+      <stop offset="100%" stop-color="#091b17"/>
+    </linearGradient>
+    <linearGradient id="card-grad4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2c1a38"/>
+      <stop offset="100%" stop-color="#170c1e"/>
+    </linearGradient>
+    <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Canvas Border & Background -->
+  <rect width="960" height="520" fill="url(#bg-gradient)"/>
+  <rect x="15" y="15" width="930" height="490" rx="14" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Top Title Header -->
+  <rect x="15" y="15" width="930" height="46" rx="14" fill="#0f172a"/>
+  <circle cx="40" cy="38" r="5" fill="#ef4444"/>
+  <circle cx="58" cy="38" r="5" fill="#f59e0b"/>
+  <circle cx="76" cy="38" r="5" fill="#10b981"/>
+  <text x="105" y="42" fill="#94a3b8" font-family="monospace" font-size="12" font-weight="600">PRIVACY-FIRST MULTI-MODEL LLM CHATBOT &amp; INFERENCE PIPELINE</text>
+  <rect x="730" y="26" width="195" height="24" rx="5" fill="#1e293b" stroke="#38bdf8" stroke-width="1"/>
+  <text x="827" y="42" fill="#38bdf8" font-family="monospace" font-size="10.5" font-weight="bold" text-anchor="middle">🔒 PRESIDIO + OLLAMA SSE</text>
+
+  <!-- STAGE 1: Client Layer (React 18 + Tailwind) -->
+  <g transform="translate(40, 85)">
+    <rect width="200" height="390" rx="10" fill="url(#card-grad1)" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect width="200" height="34" rx="10" fill="#0284c7" opacity="0.25"/>
+    <text x="15" y="23" fill="#38bdf8" font-family="sans-serif" font-size="12" font-weight="bold">STAGE 1: REACT 18 UI</text>
+    <text x="15" y="60" fill="#f8fafc" font-family="sans-serif" font-size="13" font-weight="600">Frontend Client</text>
+    <text x="15" y="80" fill="#94a3b8" font-family="monospace" font-size="10.5">Vite + Tailwind CSS</text>
+
+    <!-- Component Cards -->
+    <rect x="12" y="105" width="176" height="52" rx="6" fill="#091224" stroke="#1e3a5f" stroke-width="1"/>
+    <text x="22" y="125" fill="#7dd3fc" font-family="sans-serif" font-size="11" font-weight="600">⚡ SSE Token Parser</text>
+    <text x="22" y="142" fill="#64748b" font-family="sans-serif" font-size="9.5">Character streaming display</text>
+
+    <rect x="12" y="170" width="176" height="52" rx="6" fill="#091224" stroke="#1e3a5f" stroke-width="1"/>
+    <text x="22" y="190" fill="#7dd3fc" font-family="sans-serif" font-size="11" font-weight="600">🎛️ Multi-Model Switcher</text>
+    <text x="22" y="207" fill="#64748b" font-family="sans-serif" font-size="9.5">Dynamic Ollama dropdown</text>
+
+    <rect x="12" y="235" width="176" height="52" rx="6" fill="#091224" stroke="#1e3a5f" stroke-width="1"/>
+    <text x="22" y="255" fill="#7dd3fc" font-family="sans-serif" font-size="11" font-weight="600">🛡️ Incognito Privacy Mode</text>
+    <text x="22" y="272" fill="#64748b" font-family="sans-serif" font-size="9.5">Client-side session toggle</text>
+
+    <rect x="12" y="300" width="176" height="52" rx="6" fill="#091224" stroke="#1e3a5f" stroke-width="1"/>
+    <text x="22" y="320" fill="#7dd3fc" font-family="sans-serif" font-size="11" font-weight="600">🎨 Dynamic Themes</text>
+    <text x="22" y="337" fill="#64748b" font-family="sans-serif" font-size="9.5">Light / Dark / System mode</text>
+
+    <text x="15" y="372" fill="#38bdf8" font-family="monospace" font-size="9.5">fetch() POST stream:true</text>
+  </g>
+
+  <!-- Arrow 1 -> 2 -->
+  <path d="M 245 270 L 265 270" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="4,3"/>
+
+  <!-- STAGE 2: Security & Presidio PII Engine -->
+  <g transform="translate(270, 85)">
+    <rect width="200" height="390" rx="10" fill="url(#card-grad4)" stroke="#ec4899" stroke-width="1.5"/>
+    <rect width="200" height="34" rx="10" fill="#db2777" opacity="0.25"/>
+    <text x="15" y="23" fill="#f472b6" font-family="sans-serif" font-size="12" font-weight="bold">STAGE 2: PRIVACY GUARD</text>
+    <text x="15" y="60" fill="#f8fafc" font-family="sans-serif" font-size="13" font-weight="600">Presidio Anonymizer</text>
+    <text x="15" y="80" fill="#94a3b8" font-family="monospace" font-size="10.5">Analyzer &amp; Masking Engine</text>
+
+    <rect x="12" y="105" width="176" height="60" rx="6" fill="#1b0e26" stroke="#4a1844" stroke-width="1"/>
+    <text x="22" y="125" fill="#f472b6" font-family="sans-serif" font-size="11" font-weight="600">🔍 Entity Analyzer</text>
+    <text x="22" y="142" fill="#a78bfa" font-family="monospace" font-size="9.5">Detects PERSON, EMAIL,</text>
+    <text x="22" y="156" fill="#a78bfa" font-family="monospace" font-size="9.5">PHONE, SSN, IP, LOC</text>
+
+    <rect x="12" y="178" width="176" height="60" rx="6" fill="#1b0e26" stroke="#4a1844" stroke-width="1"/>
+    <text x="22" y="198" fill="#f472b6" font-family="sans-serif" font-size="11" font-weight="600">🛡️ Anonymizer Engine</text>
+    <text x="22" y="215" fill="#cbd5e1" font-family="sans-serif" font-size="9.5">Redacts sensitive spans</text>
+    <text x="22" y="229" fill="#f43f5e" font-family="monospace" font-size="9.5">to &lt;PERSON&gt;, &lt;EMAIL&gt;</text>
+
+    <rect x="12" y="250" width="176" height="80" rx="6" fill="#1b0e26" stroke="#4a1844" stroke-width="1"/>
+    <text x="22" y="270" fill="#f472b6" font-family="sans-serif" font-size="11" font-weight="600">⚖️ Enterprise Compliance</text>
+    <text x="22" y="287" fill="#cbd5e1" font-family="sans-serif" font-size="9.5">• GDPR &amp; HIPAA Safe</text>
+    <text x="22" y="303" fill="#cbd5e1" font-family="sans-serif" font-size="9.5">• 100% On-Premise NLP</text>
+    <text x="22" y="319" fill="#cbd5e1" font-family="sans-serif" font-size="9.5">• Zero Data Leakage</text>
+
+    <text x="15" y="372" fill="#ec4899" font-family="monospace" font-size="9.5">Sanitized text forwarded</text>
+  </g>
+
+  <!-- Arrow 2 -> 3 -->
+  <path d="M 475 270 L 495 270" stroke="#a855f7" stroke-width="2" stroke-dasharray="4,3"/>
+
+  <!-- STAGE 3: Backend & Orchestration (Django REST Framework) -->
+  <g transform="translate(500, 85)">
+    <rect width="200" height="390" rx="10" fill="url(#card-grad2)" stroke="#a855f7" stroke-width="1.5"/>
+    <rect width="200" height="34" rx="10" fill="#9333ea" opacity="0.25"/>
+    <text x="15" y="23" fill="#c084fc" font-family="sans-serif" font-size="12" font-weight="bold">STAGE 3: DJANGO REST</text>
+    <text x="15" y="60" fill="#f8fafc" font-family="sans-serif" font-size="13" font-weight="600">Backend API Hub</text>
+    <text x="15" y="80" fill="#94a3b8" font-family="monospace" font-size="10.5">Django + Streaming HTTP</text>
+
+    <rect x="12" y="105" width="176" height="52" rx="6" fill="#0d0e26" stroke="#312e81" stroke-width="1"/>
+    <text x="22" y="125" fill="#c084fc" font-family="sans-serif" font-size="11" font-weight="600">🌊 StreamingHttpResponse</text>
+    <text x="22" y="142" fill="#94a3b8" font-family="sans-serif" font-size="9.5">Event-stream SSE yields</text>
+
+    <rect x="12" y="170" width="176" height="52" rx="6" fill="#0d0e26" stroke="#312e81" stroke-width="1"/>
+    <text x="22" y="190" fill="#c084fc" font-family="sans-serif" font-size="11" font-weight="600">💾 ChatWindow Master</text>
+    <text x="22" y="207" fill="#94a3b8" font-family="sans-serif" font-size="9.5">UUID sessions &amp; context</text>
+
+    <rect x="12" y="235" width="176" height="52" rx="6" fill="#0d0e26" stroke="#312e81" stroke-width="1"/>
+    <text x="22" y="255" fill="#c084fc" font-family="sans-serif" font-size="11" font-weight="600">📜 ChatHistory Ledger</text>
+    <text x="22" y="272" fill="#94a3b8" font-family="sans-serif" font-size="9.5">Original prompts &amp; model logs</text>
+
+    <rect x="12" y="300" width="176" height="52" rx="6" fill="#0d0e26" stroke="#312e81" stroke-width="1"/>
+    <text x="22" y="320" fill="#c084fc" font-family="sans-serif" font-size="11" font-weight="600">🔑 Token Auth &amp; Profiles</text>
+    <text x="22" y="337" fill="#94a3b8" font-family="sans-serif" font-size="9.5">IsAuthenticated security</text>
+
+    <text x="15" y="372" fill="#a855f7" font-family="monospace" font-size="9.5">REST API /ask_model</text>
+  </g>
+
+  <!-- Arrow 3 -> 4 -->
+  <path d="M 705 270 L 725 270" stroke="#10b981" stroke-width="2" stroke-dasharray="4,3"/>
+
+  <!-- STAGE 4: Local LLM Engine (Ollama / Local Inference) -->
+  <g transform="translate(730, 85)">
+    <rect width="195" height="390" rx="10" fill="url(#card-grad3)" stroke="#10b981" stroke-width="1.5"/>
+    <rect width="195" height="34" rx="10" fill="#059669" opacity="0.25"/>
+    <text x="15" y="23" fill="#34d399" font-family="sans-serif" font-size="12" font-weight="bold">STAGE 4: LOCAL LLMS</text>
+    <text x="15" y="60" fill="#f8fafc" font-family="sans-serif" font-size="13" font-weight="600">Ollama Inference</text>
+    <text x="15" y="80" fill="#94a3b8" font-family="monospace" font-size="10.5">Multi-Model Engine</text>
+
+    <rect x="12" y="105" width="171" height="52" rx="6" fill="#061814" stroke="#064e3b" stroke-width="1"/>
+    <text x="22" y="125" fill="#34d399" font-family="sans-serif" font-size="11" font-weight="600">🦙 Llama 3.2 (3B / 1B)</text>
+    <text x="22" y="142" fill="#6ee7b7" font-family="sans-serif" font-size="9.5">Ultra-fast general reasoning</text>
+
+    <rect x="12" y="170" width="171" height="52" rx="6" fill="#061814" stroke="#064e3b" stroke-width="1"/>
+    <text x="22" y="190" fill="#34d399" font-family="sans-serif" font-size="11" font-weight="600">🧠 DeepSeek-R1 (8B)</text>
+    <text x="22" y="207" fill="#6ee7b7" font-family="sans-serif" font-size="9.5">Chain-of-thought logic</text>
+
+    <rect x="12" y="235" width="171" height="52" rx="6" fill="#061814" stroke="#064e3b" stroke-width="1"/>
+    <text x="22" y="255" fill="#34d399" font-family="sans-serif" font-size="11" font-weight="600">⚡ Subprocess Detection</text>
+    <text x="22" y="272" fill="#6ee7b7" font-family="sans-serif" font-size="9.5">ollama list terminal parser</text>
+
+    <rect x="12" y="300" width="171" height="52" rx="6" fill="#061814" stroke="#064e3b" stroke-width="1"/>
+    <text x="22" y="320" fill="#34d399" font-family="sans-serif" font-size="11" font-weight="600">🔒 100% Air-Gapped</text>
+    <text x="22" y="337" fill="#6ee7b7" font-family="sans-serif" font-size="9.5">No API keys · Zero telemetry</text>
+
+    <text x="15" y="372" fill="#10b981" font-family="monospace" font-size="9.5">Tokens streamed back ➔</text>
+  </g>
+</svg>

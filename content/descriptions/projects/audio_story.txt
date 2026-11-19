@@ -2,6 +2,8 @@
 
 An automated, end-to-end generative storytelling and cinematic podcast production engine that converts raw historical and mythological markdown texts into high-retention audio scripts using `Qwen2.5-7B-Instruct`, synthesizes expressive neural speech via a blended `Kokoro ONNX` model (70% Indian Female + 30% Warm Emotional Female), and masters the final multi-track mix with automated BGM ducking (-19dB), 700ms dramatic pacing, and smooth outro fades.
 
+**🎙️ Official Podcast Channel**: [Listen on Spotify & Platforms (The Narrative Network)](https://linktr.ee/thenarrativenetwork) · `linktr.ee/thenarrativenetwork`
+
 ---
 
 ## 🎯 System Architecture & 4-Stage Production Lifecycle

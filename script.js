@@ -31,7 +31,7 @@
   } catch (error) {
     savedTheme = null;
   }
-  applyTheme(savedTheme === "light" ? "light" : "dark");
+  applyTheme(savedTheme === "dark" ? "dark" : "light");
 
   themeToggleFloats.forEach(function (btn) {
     btn.addEventListener("click", function () {
@@ -855,12 +855,12 @@
     }).join("");
 
     var liveDemoBtn = data.liveUrl
-      ? '<a href="' + data.liveUrl + '" target="_blank" rel="noreferrer" class="project-link" style="color: var(--lime);">Live Demo ↗</a>'
+      ? '<a href="' + data.liveUrl + '" target="_blank" rel="noreferrer" class="project-link" style="color: var(--lime);">' + (data.liveUrlText || 'Live Demo ↗') + '</a>'
       : '';
 
     var actionButtonsHtml = (data.liveUrl || data.github) ? (
       '<div style="margin: 1.2rem 0 1.6rem; display: flex; flex-wrap: wrap; gap: 0.8rem; align-items: center;">' +
-      (data.liveUrl ? '<a href="' + data.liveUrl + '" target="_blank" rel="noreferrer" class="button button--primary" style="display: inline-flex; align-items: center; gap: 0.4rem;">Launch Live Website <span>↗</span></a>' : '') +
+      (data.liveUrl ? '<a href="' + data.liveUrl + '" target="_blank" rel="noreferrer" class="button button--primary" style="display: inline-flex; align-items: center; gap: 0.4rem;">' + (data.liveButtonText || 'Launch Live Website') + ' <span>↗</span></a>' : '') +
       (data.github ? '<a href="' + data.github + '" target="_blank" rel="noreferrer" class="button button--secondary" style="display: inline-flex; align-items: center; gap: 0.4rem;">View Source Code <span>↗</span></a>' : '') +
       '</div>'
     ) : '';
@@ -1381,6 +1381,19 @@
   function getProjectVisualHtml(proj) {
     if (proj.visualHtml) return proj.visualHtml;
 
+    if (proj.id === "llm_chatbot") {
+      return (
+        '<div class="project-card__visual project-card__visual--llm-chatbot" style="display: grid; place-items: center; background: radial-gradient(circle at 45% 38%, #1e1b4b, #090d1a 64%);" aria-hidden="true">' +
+        '<div class="visual-window visual-window--pipeline" style="border-color: rgba(56, 189, 248, 0.3);">' +
+        '<div class="visual-window__bar"><i></i><i></i><i></i><span style="margin-left:auto; font-family:var(--mono); font-size:0.55rem; color:#38bdf8; font-weight:700;">PRESIDIO PII · OLLAMA SSE STREAMING</span></div>' +
+        '<div class="visual-mail" style="border-color:rgba(236, 72, 153, 0.25); background:rgba(236, 72, 153, 0.06);"><span class="visual-mail__sender" style="color:var(--pink);">Presidio PII Analyzer ➔ Redact &lt;PERSON&gt;, &lt;EMAIL&gt;, &lt;PHONE&gt;</span><span class="visual-mail__line" style="background:rgba(236, 72, 153, 0.3);"></span><span class="visual-mail__line visual-mail__line--short" style="background:rgba(236, 72, 153, 0.2);"></span></div>' +
+        '<div class="visual-flow" style="color:#bae6fd;"><span>Django REST API</span><b>➔</b><span style="color:var(--lime);">Ollama (Llama 3.2)</span><b>➔</b><span>SSE EventStream</span></div>' +
+        '<div class="visual-output" style="border-color:rgba(16, 185, 129, 0.25); background:rgba(16, 185, 129, 0.07); color:#a7f3d0;"><span class="visual-output__pulse" style="background:var(--lime); box-shadow:0 0 0.5rem var(--lime);"></span><span>100% Air-Gapped Local Inference · Zero PII Leakage · React 18 UI</span></div>' +
+        '</div>' +
+        '</div>'
+      );
+    }
+
     if (proj.id === "audio_story") {
       return (
         '<div class="project-card__visual project-card__visual--audio-story" aria-hidden="true">' +
@@ -1508,7 +1521,8 @@
         metaHtml = "<span>" + (proj.meta || "") + "</span>";
       }
       if (proj.liveUrl) {
-        metaHtml += '<span class="project-badge--live" style="color: var(--lime); font-weight: 700; font-family: var(--mono); font-size: 0.72rem; margin-left: auto; display: inline-flex; align-items: center; gap: 0.35rem;"><i style="display:inline-block; width:6px; height:6px; border-radius:50%; background:var(--lime); box-shadow:0 0 8px var(--lime);"></i> Live Site</span>';
+        var badgeLabel = proj.liveBadgeText || "Live Site";
+        metaHtml += '<span class="project-badge--live" style="color: var(--lime); font-weight: 700; font-family: var(--mono); font-size: 0.72rem; margin-left: auto; display: inline-flex; align-items: center; gap: 0.35rem;"><i style="display:inline-block; width:6px; height:6px; border-radius:50%; background:var(--lime); box-shadow:0 0 8px var(--lime);"></i> ' + badgeLabel + '</span>';
       }
 
       var tagsHtml = (proj.tags || []).map(function (t) { return "<span>" + t + "</span>"; }).join("");
@@ -1519,7 +1533,7 @@
       }
 
       var actionHtml = proj.liveUrl
-        ? '<div class="project-card__action"><span>Explore Project ↗</span><a href="' + proj.liveUrl + '" target="_blank" rel="noreferrer" class="project-link" style="color: var(--lime); margin-left: auto; z-index: 2;" onclick="event.stopPropagation();">Live Demo ↗</a></div>'
+        ? '<div class="project-card__action"><span>Explore Project ↗</span><a href="' + proj.liveUrl + '" target="_blank" rel="noreferrer" class="project-link" style="color: var(--lime); margin-left: auto; z-index: 2;" onclick="event.stopPropagation();">' + (proj.liveUrlText || 'Live Demo ↗') + '</a></div>'
         : '<div class="project-card__action">Explore Architecture &amp; Slides <span>↗</span></div>';
 
       cardEl.innerHTML =

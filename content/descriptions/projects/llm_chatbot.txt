@@ -1,0 +1,50 @@
+# Privacy-First Multi-Model LLM Chatbot — Presidio PII Anonymization & Ollama SSE
+
+A production-grade, privacy-first conversational AI terminal integrating Microsoft Presidio to detect and redact Personally Identifiable Information (PII) before routing prompts to local multi-model LLMs (Ollama / Llama 3.2), serving real-time Server-Sent Events (SSE) token streams to a modern React + Tailwind frontend with persistent chat window sessions.
+
+**GitHub Repository**: [github.com/mr-mudgal/LLM_ChatBot](https://github.com/mr-mudgal/LLM_ChatBot)
+
+---
+
+## 🎯 Architecture Overview & Data Flow
+
+```
+┌─────────────────────────────────┐       ┌──────────────────────────────────┐
+│  React 18 + Tailwind Frontend   │ ────> │  Django REST Framework Backend   │
+│  SSE Parser / Model Switcher UI │ <──── │  StreamingHttpResponse + Token   │
+└─────────────────────────────────┘       └──────────────────────────────────┘
+                                                          │
+                                                          ▼
+┌─────────────────────────────────┐       ┌──────────────────────────────────┐
+│  Ollama Multi-Model Engine      │ <──── │  Microsoft Presidio Engine       │
+│  Llama 3.2 / DeepSeek (Airgap)  │ ────> │  Analyzer + Anonymizer PII Mask  │
+└─────────────────────────────────┘       └──────────────────────────────────┘
+```
+
+---
+
+## 🛡️ Phase 1: Enterprise PII Detection & Anonymization
+- **Microsoft Presidio NLP Pipeline**: Initialized with `AnalyzerEngine()` and `AnonymizerEngine()` to inspect incoming prompt text on-premise.
+- **Sensitive Entity Coverage**: Automatically detects and redacts high-risk entities including names (`PERSON`), email addresses (`EMAIL_ADDRESS`), telephone numbers (`PHONE_NUMBER`), credit cards, IP addresses, and physical locations.
+- **Data Protection Guarantee**: Replaces sensitive tokens with standardized contextual masks (`<PERSON>`, `<EMAIL_ADDRESS>`) before passing prompts to local or remote language models, enforcing strict GDPR, HIPAA, and SOC-2 compliance.
+
+---
+
+## ⚡ Phase 2: Local Multi-Model Inference with Ollama
+- **Dynamic Model Discovery**: Executes `subprocess.run(['ollama', 'list'])` to discover locally available weights (e.g., Llama 3.2, DeepSeek-R1 8B, Qwen 2.5), populating model options dynamically without hardcoded limits.
+- **100% Offline & Private**: Runs models locally via Ollama inference, ensuring zero user prompt or session context data leaves the internal infrastructure.
+- **Dynamic Model Selection**: Allows users to toggle models per conversation according to task requirements (high-throughput reasoning vs deep chain-of-thought analysis).
+
+---
+
+## 🌊 Phase 3: Low-Latency Server-Sent Events (SSE) Streaming
+- **Token-by-Token Generator**: Implements Python generator functions with chunked HTTP streaming (`StreamingHttpResponse(content_type='text/event-stream')`).
+- **Buffer-Safe JSON Payloads**: Enforces clean JSON encapsulation (`{"answer": token}`) to protect newlines, code blocks, and markdown syntax from breaking client-side EventSource streams.
+- **Non-Blocking Concurrency**: Handles multiple client connections smoothly while persisting full conversation history post-completion.
+
+---
+
+## 💾 Phase 4: Chat Session Context & Database Architecture
+- **Window Master Schema**: Implements UUID-indexed `ChatWindow` tables tracking chat titles, contextual histories, and timestamped session lifecycles.
+- **Relational History Ledger**: Persists original unmasked user prompts and generated model responses in `ChatHistory` linked directly to authenticated user accounts (`User` and `Profile`).
+- **Incognito Mode & Theme Control**: Supports private incognito sessions and system/dark/light theme persistence stored via Django user profiles and browser storage.
